@@ -2,6 +2,9 @@ package Array;
 
 import java.util.Arrays;
 
+/**
+ * By siomara.com.br on May, 2022.
+ */
 public class ArrayLinearSearch {
 
     public static void main(String[] args) {
@@ -30,7 +33,7 @@ public class ArrayLinearSearch {
 
         }
 
-        // If code reaches here means that element was NOT FOUND
+        // If code reaches here means that element was NOT FOUND.
         System.out.println("Total of attempts: " + array.length);
         return -1;
 

@@ -2,6 +2,9 @@ package Array;
 
 import java.util.Arrays;
 
+/**
+ * By siomara.com.br on May, 2022.
+ */
 public class ArrayLinearSearchAttempts {
 
     public static void main(String[] args) {
@@ -28,27 +31,27 @@ public class ArrayLinearSearchAttempts {
 
         for (leftIndex = 0; leftIndex <= rightIndex;) {
 
-            // Searching from LEFT to RIGHT
+            // Searching from LEFT to RIGHT.
             if (array[leftIndex] == elementToBeFound) {
                 System.out.println("\nSearching LEFT-TO-RIGHT: element found with "
                         + (leftIndex + 1) + " attempt(s)");
                 return leftIndex;
             }
 
-            // Searching from RIGHT to LEFT
+            // Searching from RIGHT to LEFT.
             if (array[rightIndex] == elementToBeFound) {
                 System.out.println("\nSearching RIGHT-TO-LEFT: element found with "
                         + (arrLength - rightIndex) + " attempt(s)");
                 return rightIndex;
             }
 
-            // Increment left/decrement right indexes
+            // Increment left/decrement right indexes.
             leftIndex++;
             rightIndex--;
 
         }
 
-        // If code reaches here means that element was NOT FOUND
+        // If code reaches here means that element was NOT FOUND.
         System.out.println("\nSearching BOTH DIRECTIONS with "
                 + leftIndex + " attempt(s) only");
         return -1;
