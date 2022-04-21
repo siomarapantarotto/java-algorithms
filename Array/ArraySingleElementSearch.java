@@ -5,7 +5,7 @@ package Array;
  Find the element that occurs once. The expected time complexity is O(n) and O(1) extra space.
  */ 
  
-class SingleArrayElement {
+class ArraySingleElementSearch {
     // Method to find the element that occur only once
     static int getSingle(int arr[], int n)
     {
