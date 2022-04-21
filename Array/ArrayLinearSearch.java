@@ -20,9 +20,9 @@ public class ArrayLinearSearch {
 
     }
 
-    public static int find(int[] array, int element) {
+    public static int find(int[] array, int elementToBeFound) {
         for (int i = 0; i <= (array.length - 1); i++) {
-            if (array[i] == element) {
+            if (array[i] == elementToBeFound) {
                 return i;
             }
         }
