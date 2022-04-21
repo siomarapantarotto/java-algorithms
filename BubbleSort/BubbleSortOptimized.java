@@ -1,3 +1,5 @@
+package BubbleSort;
+
 public class BubbleSortOptimized {
 
 	// An optimized version of Bubble Sort

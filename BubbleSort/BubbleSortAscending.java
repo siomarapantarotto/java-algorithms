@@ -1,3 +1,5 @@
+package BubbleSort;
+
 public class BubbleSortAscending {
 
     static void bubbleAscending(int[] arr) {

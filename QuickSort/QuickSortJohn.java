@@ -1,3 +1,5 @@
+package QuickSort;
+
 import java.util.Random;
 //import java.util.Arrays;
 

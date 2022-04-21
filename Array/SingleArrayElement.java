@@ -1,11 +1,11 @@
-
+package Array;
 /**
  Java code to find the element that occur only once.
  Given an array where every element occurs three times, except one element which occurs only once.
  Find the element that occurs once. The expected time complexity is O(n) and O(1) extra space.
  */ 
  
-class Single ArrayElement {
+class SingleArrayElement {
     // Method to find the element that occur only once
     static int getSingle(int arr[], int n)
     {
