@@ -10,7 +10,7 @@ import java.util.Arrays;
 // except a specific key. However a Hash Table is a data structure
 // that offers fast insertion and searching capabilities.
 
-public class HashFunction2 {
+public class ComplexHashFunction {
 
     String[] theArray;
     int arraySize;
@@ -18,12 +18,7 @@ public class HashFunction2 {
 
     public static void main(String[] args) {
 
-        HashFunction2 theFunc = new HashFunction2(30);
-
-        // Simplest Hash Function
-        // String[] elementsToAdd = { "1", "5", "17", "21", "26" };
-
-        // theFunc.hashFunction1(elementsToAdd, theFunc.theArray);
+        ComplexHashFunction theFunc = new ComplexHashFunction(30);
 
         // Mod Hash Function
         // This contains exactly 30 items to show how collisions will work
@@ -42,7 +37,7 @@ public class HashFunction2 {
     }
 
     // Constructor
-    HashFunction2(int size) {
+    ComplexHashFunction(int size) {
         arraySize = size;
         theArray = new String[size];
         Arrays.fill(theArray, "-1");
