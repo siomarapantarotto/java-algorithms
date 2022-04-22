@@ -2,11 +2,13 @@ package Bitwise;
 
 /**
  * By siomara.com.br on May, 2022.
+ * This class shows how bitwise operators work.
+ * Attention that '&=' and '|=' change original variables values.
  */
 public class BitwiseOperators {
 
     public static void main(String[] args) {
-        // Initialize values
+        // Initialize values.
         // int a = 3, b = 3;
         int a = 5, b = 2;
 
@@ -18,17 +20,9 @@ public class BitwiseOperators {
         System.out.println("a & b \t==> " + Integer.toBinaryString(a & b)
                 + "\t= " + (a & b));
 
-        // bitwise AND combined for shorthand assignment
-        System.out.println("a &= b \t==> " + Integer.toBinaryString(a &= b)
-                + "\t= " + (a &= b));
-
         // bitwise OR
         System.out.println("a | b \t==> " + Integer.toBinaryString(a | b)
                 + "\t= " + (a | b));
-
-        // bitwise OR combined for shorthand assignment
-        System.out.println("a |= b \t==> " + Integer.toBinaryString(a |= b)
-                + "\t= " + (a |= b));
 
         // bitwise XOR
         System.out.println("a ^ b \t==> " + Integer.toBinaryString(a ^ b)
@@ -36,5 +30,19 @@ public class BitwiseOperators {
 
         // bitwise NOT
         System.out.println("~a = " + ~a);
+
+        // bitwise AND combined for shorthand assignment
+        // Attention: "a" will be set to a diferent value with this assignment
+        System.out.println("\nGiven a = " + a + " and b = " + b + " then...");
+        System.out.println("a &= b \t==> " + Integer.toBinaryString(a &= b)
+                + "\t= " + (a &= b));
+
+        // bitwise OR combined for shorthand assignment
+        // Attention: "a" will be set to a diferent value with this assignment
+        a = 5; // set "a" value back to original 5 since it changed above
+        System.out.println("\nGiven a = " + a + " and b = " + b + " then...");
+        System.out.println("a |= b \t==> " + Integer.toBinaryString(a |= b)
+        + "\t= " + (a |= b));
+
     }
 }
