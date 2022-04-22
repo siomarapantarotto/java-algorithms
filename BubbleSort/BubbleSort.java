@@ -5,41 +5,44 @@ import java.util.Random;
 public class BubbleSort {
     public static void main(String[] args) {
 
-        Random rand = new Random();
-        int[] numbers = new int[10];
-        int i, temp;
+        Random random = new Random();
+        int[] array = new int[10];
+        int temp;
 
-        for (i = 0; i < numbers.length; i++) {
-            numbers[i] = rand.nextInt(1000000);
+        // Create array randomly.
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(50);
         }
 
-        System.out.println("Before:");
-        printArray(numbers);
+        // Printing array before sorting.
+        System.out.println("\nUnsorted array:");
+        printArray(array);
 
-        // Sorting algorithm here
+        // Sorting algorithm comes here.
         boolean swappedSomething = true;
 
         while (swappedSomething) {
             swappedSomething = false;
 
-            for (i = 0; i < numbers.length - 1; i++) {
-                if (numbers[i] > numbers[i + 1]) {
+            for (int i = 0; i < (array.length - 1); i++) {
+                if (array[i] > array[i + 1]) {
+                    temp = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = temp;
                     swappedSomething = true;
-                    temp = numbers[i];
-                    numbers[i] = numbers[i + 1];
-                    numbers[i + 1] = temp;
                 }
             }
         }
 
-        System.out.println("\nAfter:");
-        printArray(numbers);
+        // Printing array after sorting.
+        System.out.println("\nSorted array:");
+        printArray(array);
     }
 
-    private static void printArray(int[] numbers) {
-        int i;
-        for (i = 0; i < numbers.length; i++) {
-            System.out.println(numbers[i]);
+    // Method for printing array.
+    private static void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
         }
     }
 }
