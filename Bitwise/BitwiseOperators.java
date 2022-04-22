@@ -3,7 +3,7 @@ package Bitwise;
 /**
  * By siomara.com.br on May, 2022.
  * This class shows how bitwise operators work.
- * Attention that '&=' and '|=' change original variables values.
+ * ATTENTION: Short assignments '&=' or '|=' change original variables values.
  */
 public class BitwiseOperators {
 
@@ -16,33 +16,33 @@ public class BitwiseOperators {
         System.out.println("binary  a = " + Integer.toBinaryString(a));
         System.out.println("binary  b = " + Integer.toBinaryString(b));
 
-        // bitwise AND
+        // Bitwise 'AND'.
         System.out.println("a & b \t==> " + Integer.toBinaryString(a & b)
                 + "\t= " + (a & b));
 
-        // bitwise OR
+        // Bitwise 'OR'.
         System.out.println("a | b \t==> " + Integer.toBinaryString(a | b)
                 + "\t= " + (a | b));
 
-        // bitwise XOR
+        // Bitwise 'XOR'.
         System.out.println("a ^ b \t==> " + Integer.toBinaryString(a ^ b)
                 + "\t= " + (a ^ b));
 
-        // bitwise NOT
+        // Bitwise 'NOT'.
         System.out.println("~a = " + ~a);
 
-        // bitwise AND combined for shorthand assignment
-        // Attention: "a" will be set to a diferent value with this assignment
+        // Bitwise 'AND' combined with '=' for shorthand assignment.
+        // ATTENTION: "a" will be set to a diferent value with this assignment.
         System.out.println("\nGiven a = " + a + " and b = " + b + " then...");
         System.out.println("a &= b \t==> " + Integer.toBinaryString(a &= b)
                 + "\t= " + (a &= b));
 
-        // bitwise OR combined for shorthand assignment
-        // Attention: "a" will be set to a diferent value with this assignment
-        a = 5; // set "a" value back to original 5 since it changed above
+        // Bitwise 'OR' combined with '=' for shorthand assignment.
+        // ATTENTION: "a" will be set to a diferent value with this assignment.
+        // Setting "a" value back to original '5' since it changed previously.
+        a = 5; 
         System.out.println("\nGiven a = " + a + " and b = " + b + " then...");
         System.out.println("a |= b \t==> " + Integer.toBinaryString(a |= b)
         + "\t= " + (a |= b));
-
     }
 }
