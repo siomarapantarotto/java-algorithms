@@ -8,7 +8,7 @@ public class BitwiseOperators {
     public static void main(String[] args) {
         // Initialize values
         // int a = 3, b = 3;
-        int a = 3, b = 2;
+        int a = 5, b = 2;
 
         System.out.println("\nGiven a = " + a + " and b = " + b + " then...");
         System.out.println("binary  a = " + Integer.toBinaryString(a));
@@ -18,7 +18,7 @@ public class BitwiseOperators {
         System.out.println("a & b \t==> " + Integer.toBinaryString(a & b)
                 + "\t= " + (a & b));
 
-        // combined operators for shorthand assignment
+        // bitwise AND combined for shorthand assignment
         System.out.println("a &= b \t==> " + Integer.toBinaryString(a &= b)
                 + "\t= " + (a &= b));
 
@@ -26,8 +26,8 @@ public class BitwiseOperators {
         System.out.println("a | b \t==> " + Integer.toBinaryString(a | b)
                 + "\t= " + (a | b));
 
-        // combined operators for shorthand assignment
-        System.out.println("a &= b \t==> " + Integer.toBinaryString(a |= b)
+        // bitwise OR combined for shorthand assignment
+        System.out.println("a |= b \t==> " + Integer.toBinaryString(a |= b)
                 + "\t= " + (a |= b));
 
         // bitwise XOR
