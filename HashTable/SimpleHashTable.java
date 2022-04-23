@@ -37,7 +37,8 @@ public class SimpleHashTable {
     // Hash Function that puts values in the same index that matches their value
     public void hashFunction(String[] elementsToAdd, String[] array) {
         for (int n = 0; n < elementsToAdd.length; n++) {
-            String newElementVal = elementsToAdd[n];
+            int hash = n + 1 - 1;
+            String newElementVal = elementsToAdd[hash];
             array[Integer.parseInt(newElementVal)] = "[" + newElementVal + "]";
         }
     }
