@@ -1,8 +1,8 @@
 # Java Algorithms
 
 <p align='center'>
-  <img src="https://img.shields.io/badge/Jakarta-Java-007396?style=for-the-badge&logo=java&logoColor=white" />&nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" />&nbsp;&nbsp;  
+  Coding <img src="https://img.shields.io/badge/Jakarta-Java-007396?style=for-the-badge&logo=java&logoColor=white" />&nbsp;&nbsp;
+  with <img src="https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" />&nbsp;&nbsp;  
 </p>
 
 Hello there!
