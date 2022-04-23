@@ -1,6 +1,6 @@
 # Java Algorithms
 
-Hello visitor!
+Hello there!
 
 This repo is under construction!
 
