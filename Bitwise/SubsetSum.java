@@ -1,6 +1,6 @@
 package Bitwise;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 
 public class SubsetSum {
 
