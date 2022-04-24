@@ -33,3 +33,6 @@ public class IntegerOpositeSignDetector {
 		return ((x ^ y) < 0);
 	}
 }
+
+// Time Complexity: O(1)
+// Auxiliary Space: O(1)
