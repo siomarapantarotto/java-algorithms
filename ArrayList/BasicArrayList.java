@@ -4,7 +4,9 @@ package ArrayList;
 // framework are bundled into the java.util package.
 import java.util.*;
 
-// A basic ArrayList sample.
+// The ArrayList class implements the List interface.
+// Syntax:  ArrayList<?> arrayListName = new ArrayList<?>();
+//          ArrayList<?> arrayListName = new ArrayList<>();
 public class BasicArrayList {
 
     // main method
@@ -12,7 +14,7 @@ public class BasicArrayList {
 
         // Instantiate an ArrayList of Integer.
         // Integer is a wrapper class for the basic datatype int.
-        ArrayList<Integer> intArrayList = new ArrayList<Integer>();
+        ArrayList<Integer> intArrayList = new ArrayList<>();
 
         // Add elements using add() method.
         intArrayList.add(10);
