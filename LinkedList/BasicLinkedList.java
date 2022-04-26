@@ -46,13 +46,16 @@ public class BasicLinkedList {
                 : "Linked List does not contain 44");
 
         Iterator<?> iterator = linkedList.iterator();
+        int i = 0;
         while (iterator.hasNext()) {
             //if ((int) iterator.next() == 20) {
             //    System.out.println("Found node with value 20");
             //}
+            System.out.println("The element is: " + linkedList.get(i));
             System.out.println(((int) iterator.next() == 20)
                 ? "This node has value 20"
                 : "This node has not value 20");
+                i++;
         }
 
     }
