@@ -17,15 +17,18 @@ public class BasicLinkedList {
         // Print empty LinkedList.
         System.out.println(linkedList);
 
+        // Add elements
         linkedList.add(5);
         linkedList.add(10);
         linkedList.add(15);
         linkedList.add(20);
         System.out.println(linkedList);
 
+        // Add in the first position
         linkedList.addFirst(1);
         System.out.println(linkedList);
 
+        // Add in the last position
         linkedList.addLast(50);
         System.out.println(linkedList);
 
