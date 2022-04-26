@@ -60,10 +60,13 @@ public class BasicLinkedList {
             //    System.out.println("Found node with value 20");
             //}
             System.out.println("The element is: " + linkedList.get(i));
-            System.out.println(((int) iterator.next() == 20)
-                ? "This node has value 20"
-                : "This node has not value 20");
-                i++;
+            //System.out.println(((int) iterator.next() == 20)
+            //    ? "This node has value 20"
+            //    : "This node has not value 20");
+            if (i > linkedList.size() -1) {
+                return;
+            }
+            i++;
         }
 
     }
