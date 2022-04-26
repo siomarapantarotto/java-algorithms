@@ -37,6 +37,7 @@ public class BasicLinkedList {
 
         System.out.println("Lisked List size is " + linkedList.size());
 
+        // Add in the midle
         linkedList.add(3, 33);
         System.out.println(linkedList);
 
