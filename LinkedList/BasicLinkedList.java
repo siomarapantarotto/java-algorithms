@@ -49,6 +49,10 @@ public class BasicLinkedList {
                 ? "Linked List contains 44"
                 : "Linked List does not contain 44");
 
+        linkedList.removeFirst();
+        linkedList.removeLast();
+        System.out.println(linkedList);
+
         Iterator<?> iterator = linkedList.iterator();
         int i = 0;
         while (iterator.hasNext()) {
