@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.List;
 
 // Main class
-public class BasicBinarySearch {
+public class CollectionBinarySearch {
 	// Main driver method
 	public static void main(String[] args)
 	{
