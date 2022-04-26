@@ -1,5 +1,6 @@
 package LinkedList;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
@@ -43,6 +44,16 @@ public class BasicLinkedList {
         System.out.println(linkedList.contains(44)
                 ? "Linked List contains 44"
                 : "Linked List does not contain 44");
+
+        Iterator<?> iterator = linkedList.iterator();
+        while (iterator.hasNext()) {
+            //if ((int) iterator.next() == 20) {
+            //    System.out.println("Found node with value 20");
+            //}
+            System.out.println(((int) iterator.next() == 20)
+                ? "This node has value 20"
+                : "This node has not value 20");
+        }
 
     }
 
