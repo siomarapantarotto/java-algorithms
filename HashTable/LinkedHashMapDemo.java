@@ -1,4 +1,4 @@
-package HashTable;
+package Hashtable;
 
 import java.util.*;
 public class LinkedHashMapDemo

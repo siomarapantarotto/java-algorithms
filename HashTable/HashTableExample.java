@@ -1,10 +1,10 @@
-package HashTable;
+package Hashtable;
 
 
 import java.util.Hashtable;
 import java.util.Enumeration;
 
-public class HashTableExample {
+public class HashtableExample {
  
  public static void main(String[] args) {
  

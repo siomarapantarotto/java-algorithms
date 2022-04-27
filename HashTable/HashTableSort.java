@@ -1,11 +1,11 @@
-package HashTable;
+package Hashtable;
 
 import java.util.Set;
 import java.util.Map;
 import java.util.Hashtable;
 import java.util.Iterator;
 ;
-public class HashTableSort
+public class HashtableSort
 {
     public static void main(String args[])
     {
