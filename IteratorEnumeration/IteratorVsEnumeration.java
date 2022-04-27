@@ -1,4 +1,4 @@
-package LinkedList.BinarySearch;
+package IteratorEnumeration;
 
 import java.util.Iterator;
 import java.util.Enumeration;
