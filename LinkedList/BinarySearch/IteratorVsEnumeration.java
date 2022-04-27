@@ -6,11 +6,11 @@ import java.util.Vector;
 
 public class IteratorVsEnumeration {
 
-    
+    // TODO: Fix enumeration bug. ????
     public static void main(String[] args){
         Vector v=new Vector();
         Object element;
-        //Enumeration<?> enum;
+        Enumeration enum;
         Iterator iter;
         long start;
         
@@ -18,7 +18,7 @@ public class IteratorVsEnumeration {
             v.add("New Element");
         }
         
-        public enum=v.elements();
+        enum=v.elements();
         iter=v.iterator();
         //*****CODE BLOCK FOR ITERATOR**********************
         start=System.currentTimeMillis();
