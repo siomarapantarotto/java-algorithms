@@ -6,11 +6,11 @@ public class HashTableSort
     public static void main(String args[])
     {
        Hashtable<Integer, String> ht= new Hashtable<Integer, String>();
-       ht.put(10, "Chaitanya");
-       ht.put(1, "Ajeet");
-       ht.put(11, "Test");
-       ht.put(9, "Demo");
-       ht.put(3, "Anuj");
+       ht.put(10, "Carlos");
+       ht.put(1, "Amanda");
+       ht.put(11, "Toninho");
+       ht.put(9, "Dalia");
+       ht.put(3, "Ana");
  
        // Get a set of the entries
        Set set = ht.entrySet();
