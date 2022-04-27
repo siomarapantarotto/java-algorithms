@@ -1,6 +1,10 @@
 package HashTable;
 
-import java.util.*;
+import java.util.Set;
+import java.util.Map;
+import java.util.Hashtable;
+import java.util.Iterator;
+;
 public class HashTableSort
 {
     public static void main(String args[])
@@ -9,7 +13,7 @@ public class HashTableSort
        ht.put(10, "Carlos");
        ht.put(1, "Amanda");
        ht.put(11, "Toninho");
-       ht.put(9, "Dalia");
+       ht.put(9, "Zeno");
        ht.put(3, "Ana");
  
        // Get a set of the entries
