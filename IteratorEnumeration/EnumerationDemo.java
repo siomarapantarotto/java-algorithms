@@ -3,7 +3,7 @@ package IteratorEnumeration;
 import java.util.Vector;
 import java.util.Enumeration;
 
-public class EnumerationClass {
+public class EnumerationDemo {
 
 	public static void main(String args[])
 	{
