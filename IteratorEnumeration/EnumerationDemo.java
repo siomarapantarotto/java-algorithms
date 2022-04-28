@@ -7,7 +7,7 @@ public class EnumerationDemo {
 
 	public static void main(String args[])
 	{
-		Enumeration months;
+		Enumeration<String> months;
 		Vector<String> monthNames = new Vector<>();
 
 		monthNames.add("January");
