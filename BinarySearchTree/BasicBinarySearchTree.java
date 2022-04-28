@@ -19,11 +19,13 @@ public class BasicBinarySearchTree {
             return -1;
         }
 
-        int[] arrayLeft = 
-        int[] arrayRight =
-
-
-        return -1;
+        if (array[midIndex] == number) {
+            return midIndex;
+        } else  if {
+            return searchFor(array, number);
+        } else {
+            return searchFor(array, number);
+        }
 
     }
     
