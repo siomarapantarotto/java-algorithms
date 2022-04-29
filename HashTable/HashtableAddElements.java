@@ -18,10 +18,13 @@ class HashtableAddElements {
 		ht1.put(1, "one");
 		ht1.put(2, "two");
 		ht1.put(3, "three");
+		ht1.put(4, "four");
 
 		ht2.put(4, "four");
 		ht2.put(5, "five");
 		ht2.put(6, "six");
+		ht2.put(7, "seven");
+
 
 		// Print mappings to the console
 		System.out.println("Mappings of ht1 single Generics : " + ht1);
@@ -51,7 +54,7 @@ class HashtableAddElements {
 		System.out.println("HT1 hashCode() : " + ht1.hashCode());
 		System.out.println("HT2 hashCode() : " + ht2.hashCode());
 
-		// check hastables equality
+		// Check hastables equality
 		boolean isequal = ht1.equals(ht2);
 		System.out.println("Are two tables equal : "+isequal); 
 
