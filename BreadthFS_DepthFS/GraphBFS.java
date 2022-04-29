@@ -11,9 +11,9 @@ class GraphBFS
  
     GraphBFS(int v)
     {
-        V = v;
-        adj = new LinkedList[v];
-        for (int i=0; i<v; i++)
+        this.V = v;
+        this.adj = new LinkedList[v];
+        for (int i = 0; i < v; i++)
         {
             adj[i] = new LinkedList<>();
         }
@@ -21,24 +21,24 @@ class GraphBFS
     }
 
  
-    void addEdge(int v,int w)
+    void addEdge(int v, int w)
     {
         adj[v].add(w);  //adding an edge to the adjacency list (edges are bidirectional in this example)
     }
  
+
     void BFS(int n)
     {
-
         boolean nodes[] = new boolean[V];   //initialize boolean array for holding the data
         int a = 0;
  
         nodes[n]=true;                  
-        queue.add(n);                   //root node is added to the top of the queue
+        queue.add(n);    //root node is added to the top of the queue
  
         while (queue.size() != 0)
         {
             n = queue.poll();           //remove the top element of the queue
-            System.out.print(n+" ");    //print the top element of the queue
+            System.out.print(n + " ");    //print the top element of the queue
  
             for (int i = 0; i < adj[n].size(); i++)  //iterate through the linked list and push all neighbors into queue
             {
@@ -69,7 +69,7 @@ class GraphBFS
         graph.addEdge(5, 4);
         graph.addEdge(5, 3);
  
-        System.out.println("The Breadth First Traversal of the graph is as follows :");
+        System.out.println("\nThe Breadth First Traversal of the graph is as follows :");
  
         graph.BFS(0);
     }
