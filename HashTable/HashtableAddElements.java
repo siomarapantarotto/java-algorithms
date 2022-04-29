@@ -25,8 +25,10 @@ class HashtableAddElements {
 		ht2.put(6, "six");
 
 		// Print mappings to the console
-		System.out.println("Mappings of ht1 : " + ht1);
-		System.out.println("Mappings of ht2 : " + ht2);
+		System.out.println("\nMappings of ht1 : " + ht1);
+		System.out.println("\nMappings of ht2 : " + ht2);
+
+
 	}
 }
 
