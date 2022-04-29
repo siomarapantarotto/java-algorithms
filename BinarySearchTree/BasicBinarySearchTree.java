@@ -1,7 +1,5 @@
 package BinarySearchTree;
 
-import java.util.*;
-
 public class BasicBinarySearchTree {
 
     public static int binarySearchRecursive(int[] array, int elementToBeFound, int left, int right) {
