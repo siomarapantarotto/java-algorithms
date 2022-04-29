@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.Hashtable;
 import java.util.Set;
 
-public class HashtableDemo {
+public class HashtableIterator1 {
 
     public static void main (String[] args) {
 
