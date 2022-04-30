@@ -1,5 +1,4 @@
 package hashtable;
-
 // Java program to demonstrate
 // adding elements to Hashtable
 
