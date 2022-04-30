@@ -1,4 +1,4 @@
-package Bitwise;
+package bitwise;
 
 public class MathAddOne {
 

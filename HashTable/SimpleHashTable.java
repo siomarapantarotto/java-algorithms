@@ -1,4 +1,4 @@
-package Hashtable;
+package hashtable;
 
 import java.util.Arrays;
 /**

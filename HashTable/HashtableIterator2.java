@@ -1,4 +1,4 @@
-package Hashtable;
+package hashtable;
 
 import java.util.Iterator;
 import java.util.Hashtable;

@@ -1,4 +1,4 @@
-package Bitwise;
+package bitwise;
 
 /**
  * By siomara.com.br on May, 2022.

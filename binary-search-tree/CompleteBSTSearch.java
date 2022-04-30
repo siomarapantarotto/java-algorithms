@@ -1,4 +1,4 @@
-package BinarySearchTree;
+package binarysearchtree;
 
 class CompleteBSTSearch {
     // node class that defines BST node

@@ -1,4 +1,4 @@
-package ArrayList;
+package arraylist;
 
 // All classes and interfaces of Java collection
 // framework are bundled into the java.util package.

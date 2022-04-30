@@ -1,4 +1,4 @@
-package Bitwise;
+package bitwise;
 
 // Find the array element that occur only once.
 class SingleElement {

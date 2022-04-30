@@ -1,4 +1,4 @@
-package BreadthFS_DepthFS;
+package bfs-dfs;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package Bitwise;
+package bitwise;
 
 // This code needs to be fixed
 // started with flag
