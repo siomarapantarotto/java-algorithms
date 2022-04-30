@@ -1,6 +1,6 @@
 package bitwise;
 
-public class MathAddXY {
+public class AddXY {
     // Main drive
     public static void main (String[] args) {
         System.out.println("\nAddXY is: ");

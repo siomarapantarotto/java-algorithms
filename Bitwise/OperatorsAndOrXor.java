@@ -3,7 +3,7 @@ package bitwise;
 /**
  * By siomara.com.br on May, 2022.
  */
-public class AndOrXor {
+public class OperatorsAndOrXor {
 
     public static void main(String[] args) {
 

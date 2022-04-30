@@ -1,5 +1,5 @@
 package bitwise;
-public class AddWithoutMath {
+public class AddXY2 {
 
     public static void main(String[] args) {   
         int sum = add(1, 9000);

@@ -10,7 +10,7 @@ package bitwise;
  * If input bits are the SAME ==> output will be FALSE (0)
  * If input bits are DIFFERENT ==> output will be TRUE (1)
  */
-public class IntegerOpositeSignDetector {
+public class OpositeSignDetector {
 
 	public static void main(String[] args) {
 

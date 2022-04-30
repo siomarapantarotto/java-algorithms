@@ -2,7 +2,6 @@ package hashtable;
 // Java program to demonstrate
 // adding elements to Hashtable
 
-import java.io.*;
 import java.util.*;
 
 class HashtableAddElements {

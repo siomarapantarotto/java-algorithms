@@ -1,6 +1,6 @@
 package bitwise;
 
-public class MathAddOne {
+public class AddOne {
 
     public static void main(String[] args) {
         System.out.printf("%d", addOne(32));
