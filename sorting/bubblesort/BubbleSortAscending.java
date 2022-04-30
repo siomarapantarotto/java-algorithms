@@ -1,13 +1,13 @@
-package BubbleSort;
+package sorting.bubblesort;
 
-public class BubbleSortDescending {
+public class BubbleSortAscending {
 
-    static void bubbleDescending(int[] arr) {
+    static void bubbleAscending(int[] arr) {
         int arrLength = arr.length;
         int i, j, temp;
         for (i = 0; i < arrLength; i++) {
             for (j = 1; j < (arrLength - i); j++) {
-                if (arr[j - 1] < arr[j]) {
+                if (arr[j - 1] > arr[j]) {
                     // Swap elements
                     temp = arr[j - 1];
                     arr[j - 1] = arr[j];
@@ -28,14 +28,14 @@ public class BubbleSortDescending {
     }
 
     public static void main(String[] args) {
-        int arr[] = { 4, 15, 12, 21, 2, 25, 10, 18, 0, 7, 9, 222 };
+        int arr[] = { 4, 15, 12, 21, 2, 25, 10, 18, 0, 7, 9, 111 };
 
-        System.out.println("Array before applying DESCENDING Bubble Sort: ");
+        System.out.println("Array before applying ASCENDING Bubble Sort: ");
         printArray(arr);
 
-        bubbleDescending(arr); // Applying Bubble Sort
+        bubbleAscending(arr); // Applying Bubble sort
 
-        System.out.println("Array after applying DESCENDING Bubble Sort: ");
+        System.out.println("Array after applying ASCENDING Bubble Sort: ");
         printArray(arr);
     }
 }
