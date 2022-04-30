@@ -1,12 +1,12 @@
-package IteratorEnumeration;
+package iteratorenumeration;
+
 // Java program to test Enumeration
 import java.util.Vector;
 import java.util.Enumeration;
 
 public class EnumerationDemo {
 
-	public static void main(String args[])
-	{
+	public static void main(String args[]) {
 		Enumeration<String> months;
 		Vector<String> monthNames = new Vector<>();
 
@@ -29,4 +29,3 @@ public class EnumerationDemo {
 		}
 	}
 }
-

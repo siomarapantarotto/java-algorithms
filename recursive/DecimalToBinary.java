@@ -12,8 +12,8 @@ public class DecimalToBinary {
         return findBinary(decimal / 2, remainder);
     }
 
-    public static void main (String[] args) {
-        System.out.println(findBinary(10, ""));
+    public static void main(String[] args) {
+        String remainder = "";
+        System.out.println(findBinary(10, remainder));
     }
-
 }
