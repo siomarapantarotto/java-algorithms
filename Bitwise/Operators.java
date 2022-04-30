@@ -5,7 +5,7 @@ package bitwise;
  * This class shows how bitwise operators work.
  * ATTENTION: Short assignments '&=' or '|=' change original variables values.
  */
-public class BitwiseOperators {
+public class Operators {
 
     public static void main(String[] args) {
         // Initialize values.

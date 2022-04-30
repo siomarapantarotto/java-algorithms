@@ -4,7 +4,7 @@ package bitwise;
 // started with flag
 // ended up being another thing
 // it happens :-)
-public class BitwiseFeatureFlag {
+public class FeatureFlag {
 
     public static void main(String[] args) {
 
