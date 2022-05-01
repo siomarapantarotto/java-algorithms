@@ -9,6 +9,7 @@ public class BinarySearch {
             return -1;
         }
 
+        // find array middle index
         // int mid = left + (right - left) / 2;
         int mid = (left + right) / 2;
 
@@ -22,7 +23,7 @@ public class BinarySearch {
             return searchFor(array, left, mid - 1, elementToBeFound);
         }
 
-        // call recursive to find element on the left array
+        // call recursive to find element on the right array
         return searchFor(array, mid + 1, right, elementToBeFound);
     }
 
@@ -34,7 +35,7 @@ public class BinarySearch {
         int elementToBeFound = 101;
 
         // call recursive method searchFor
-        // array.length - 1 is a must when searching for values > 100
+        // array.length - 1 is a must when searching for values > last array value
         int index = searchFor(array, 0, array.length - 1, elementToBeFound);
 
         // display result
