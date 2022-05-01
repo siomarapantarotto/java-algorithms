@@ -15,8 +15,8 @@ public class FibonacciCache {
         long start = System.currentTimeMillis();
         for (int i = 0; i <= n; i++) {
             System.out.println("fibonacci(" + i + ") = " + fibonacci(i) + " ");
-
         }
+        
         long finish = System.currentTimeMillis();
         System.out.println("\nFibonacci took: " + (finish - start) + " msecs");
 
