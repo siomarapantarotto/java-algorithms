@@ -32,6 +32,7 @@ public class BasicLinkedList {
         linkedList.addLast(50);
         System.out.println(linkedList);
 
+        // Remove a node not passing parameter
         linkedList.remove();
         System.out.println("Just an empty 'remove()' " + linkedList);
 
@@ -56,14 +57,14 @@ public class BasicLinkedList {
         Iterator<?> iterator = linkedList.iterator();
         int i = 0;
         while (iterator.hasNext()) {
-            //if ((int) iterator.next() == 20) {
-            //    System.out.println("Found node with value 20");
-            //}
+            // if ((int) iterator.next() == 20) {
+            // System.out.println("Found node with value 20");
+            // }
             System.out.println("The element is: " + linkedList.get(i));
-            //System.out.println(((int) iterator.next() == 20)
-            //    ? "This node has value 20"
-            //    : "This node has not value 20");
-            if (i >= linkedList.size() -1) {
+            // System.out.println(((int) iterator.next() == 20)
+            // ? "This node has value 20"
+            // : "This node has not value 20");
+            if (i >= linkedList.size() - 1) {
                 return;
             }
             i++;
