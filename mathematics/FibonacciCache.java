@@ -1,5 +1,6 @@
-package math;
-public class Fibonacci {
+package mathematics;
+
+public class FibonacciCache {
 
     // memorization
     private static long[] fibonacciCache;
@@ -10,11 +11,10 @@ public class Fibonacci {
         int n = 92;
 
         fibonacciCache = new long[n + 1];
-        
+
         long start = System.currentTimeMillis();
         for (int i = 0; i <= n; i++) {
             System.out.println("fibonacci(" + i + ") = " + fibonacci(i) + " ");
-
 
         }
         long finish = System.currentTimeMillis();
@@ -26,19 +26,19 @@ public class Fibonacci {
     private static long fibonacci(int n) {
         // base case - the condition to stop the recursive call
         // the first 3 numbers are always going to be 0 and 1
-        if (n <= 1){
+        if (n <= 1) {
             return n;
         }
 
         // primitives cannot be null so check for 0
-        if(fibonacciCache[n] !=0) {
+        if (fibonacciCache[n] != 0) {
             return fibonacciCache[n];
-        }        
-        
-        long nthFibonacciNumber = (fibonacci(n - 1) + fibonacci(n -2));
+        }
+
+        long nthFibonacciNumber = (fibonacci(n - 1) + fibonacci(n - 2));
         fibonacciCache[n] = nthFibonacciNumber;
 
         return nthFibonacciNumber;
     }
-    
+
 }

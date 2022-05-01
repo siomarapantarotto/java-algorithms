@@ -1,4 +1,4 @@
-package math;
+package mathematics;
 
 // Java program to find minimum number of denominations
 import java.util.Vector;

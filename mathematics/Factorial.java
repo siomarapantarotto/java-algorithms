@@ -1,4 +1,4 @@
-package math;
+package mathematics;
 
 public class Factorial {
     
