@@ -11,36 +11,33 @@ import java.util.List;
 // Main class
 public class CollectionBinarySearch {
 	// Main driver method
-	public static void main(String[] args)
-	{
-		// Creating an empty ArrayList of integer type
-		List<Integer> al = new ArrayList<Integer>();
+	public static void main(String[] args) {
 
-		// Populating the Arraylist
-		al.add(1);
-		al.add(2);
-		al.add(3);
-		al.add(10);
-		al.add(20);
+		// Creating an empty ArrayList of integer type
+		List<Integer> arrayList = new ArrayList<Integer>();
+
+		// Populating the ArrayList
+		arrayList.add(1);
+		arrayList.add(2);
+		arrayList.add(3);
+		arrayList.add(10);
+		arrayList.add(20);
 
 		// 10 is present at index 3
 		int key = 10;
-		int res = Collections.binarySearch(al, key);
+		int index = Collections.binarySearch(arrayList, key);
 
-		if (res >= 0)
-			System.out.println(
-				key + " found at index = " + res);
+		if (index >= 0)
+			System.out.println(key + " found at index = " + index);
 		else
 			System.out.println(key + " Not found");
 
 		key = 15;
-		res = Collections.binarySearch(al, key);
+		index = Collections.binarySearch(arrayList, key);
 
-		if (res >= 0)
-			System.out.println(
-				key + " found at index = " + res);
+		if (index >= 0)
+			System.out.println(key + " found at index = " + index);
 		else
 			System.out.println(key + " Not found");
 	}
 }
-
