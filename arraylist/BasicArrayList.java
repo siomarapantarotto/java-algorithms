@@ -2,7 +2,7 @@ package arraylist;
 
 // All classes and interfaces of Java collection
 // framework are bundled into the java.util package.
-import java.util.*;
+import java.util.ArrayList;
 
 // The ArrayList class implements the List interface.
 // Syntax:  ArrayList<?> arrayListName = new ArrayList<?>();
