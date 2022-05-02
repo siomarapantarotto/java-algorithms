@@ -2,8 +2,8 @@ package recursive;
 
 public class Palindrome {
 
-    public static void main (String[] args) {
-        System.out.println(isPalindrome("kayak"));
+    public static void main(String[] args) {
+        System.out.println(isPalindrome("racecar"));
     }
 
     public static boolean isPalindrome(String input) {
@@ -12,7 +12,7 @@ public class Palindrome {
         }
 
         if (input.charAt(0) == input.charAt(input.length() - 1)) {
-             return isPalindrome(input.substring(1, input.length() -1));
+            return isPalindrome(input.substring(1, input.length() - 1));
         }
 
         // Here different chars were found.
