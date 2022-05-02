@@ -1,4 +1,4 @@
-package linkedlist.BinarySearch;
+package arraylist;
 
 // Java Program to Demonstrate Working of binarySearch()
 // method of Collections class

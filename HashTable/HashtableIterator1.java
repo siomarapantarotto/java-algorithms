@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class HashtableIterator1 {
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         String key;
 
@@ -20,12 +20,16 @@ public class HashtableIterator1 {
 
         Set<String> keys = hashtable.keySet();
         Iterator<String> iterator = keys.iterator();
-        
+
         System.out.println("\nHashtable contains:");
-        while(iterator.hasNext()) {
+        while (iterator.hasNext()) {
             key = iterator.next();
             System.out.println("Key: " + key + "\tValue: " + hashtable.get(key));
         }
+
+        hashtable.remove("B");
+
+        System.out.println(hashtable);
 
     }
 

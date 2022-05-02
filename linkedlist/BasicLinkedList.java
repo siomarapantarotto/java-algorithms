@@ -32,6 +32,9 @@ public class BasicLinkedList {
         linkedList.addLast(50);
         System.out.println(linkedList);
 
+        linkedList.add(99);
+        System.out.println(linkedList);
+
         // Remove a node not passing parameter
         linkedList.remove();
         System.out.println("Just an empty 'remove()' " + linkedList);
