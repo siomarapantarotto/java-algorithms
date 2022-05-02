@@ -5,7 +5,7 @@ public class SockMerchant {
     // static int sockMerchant(int n, int[] ar) {
     public static void main(String args[]) {
 
-        int[] ar = new int[] { 10, 20, 30, 10, 20, 40, 50, 40, 80, 80, 90 };
+        int[] ar = new int[] { 10, 20, 30, 10, 20, 40, 50, 40, 80, 80, 30 };
 
         HashSet<Integer> set = new HashSet<Integer>();
         int count = 0;
