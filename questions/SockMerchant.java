@@ -1,3 +1,4 @@
+package questions;
 import java.util.HashSet;
 
 public class SockMerchant {
