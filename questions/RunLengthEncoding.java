@@ -28,7 +28,10 @@ public class RunLengthEncoding {
             }
         }
 
+        // append last char and counter to result
         result.append(counter).append(prevChar);
+
+        // return encoded input
         return result.toString();
 
     }
