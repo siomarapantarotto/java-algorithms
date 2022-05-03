@@ -1,5 +1,6 @@
 package questions;
 
+// by siomara.com.br on May, 3rd of 2022
 public class CountNumberPairsSumLessX {
 
     public static int sum(int[] array, int x) {
