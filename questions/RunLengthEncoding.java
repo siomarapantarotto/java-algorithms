@@ -1,5 +1,6 @@
 package questions;
 
+// Time complexity O(n)
 public class RunLengthEncoding {
 
     public static String encode(String input) {
