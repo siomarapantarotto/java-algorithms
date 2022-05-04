@@ -4,13 +4,13 @@ import java.util.Arrays;
 /**
  * by siomara.com.br on May, 21 of 2022
  */
-public class SimpleHashtable {
+public class HashtableFromScratch {
     
     String[] array;
     //int arraySize;
     
     public static void main(String[] args) {
-        SimpleHashtable simpleHashtable = new SimpleHashtable(20);
+        HashtableFromScratch simpleHashtable = new HashtableFromScratch(20);
         
         // Create and print empty array hash table before hashing
         System.out.println("\nEmpty array hash table:");
@@ -29,7 +29,7 @@ public class SimpleHashtable {
 
     // Constructor
     // Simulate an empty array hash table with [] in all positions 
-    SimpleHashtable(int arraySize) {
+    HashtableFromScratch(int arraySize) {
         this.array = new String[arraySize];
         Arrays.fill(this.array, "[]");
     }

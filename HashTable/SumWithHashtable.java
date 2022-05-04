@@ -11,7 +11,7 @@ public class SumWithHashtable {
         Hashtable<Integer, Integer> hashtable = new Hashtable<>();
         int complement = 0;
 
-        // Loop array for the first two values that added equals target.
+        // Loop array for the first two values whose sum equals target.
         for (int i = 0; i <= array.length - 1; i++) {
 
             // Calculate complement of current array value.
