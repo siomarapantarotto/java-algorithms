@@ -7,23 +7,23 @@ public class FirstNonRepeatingCharacter {
 
     public static char findFirstNonRepeatingCharacter(String input) {
 
-        // create a hash map to store chars and its counts
-        HashMap<Character, Integer> charCounts = new HashMap<>();
+        // create a hashmap to store chars and its counts
+        HashMap<Character, Integer> hmCharCounts = new HashMap<>();
 
         // loop input string adding chars to hashmap and incrementing their counts
         for (int i = 0; i < input.length(); i++) {
             char c = input.charAt(i);
-            if (charCounts.containsKey(c)) {
-                charCounts.put(c, charCounts.get(c) + 1);
+            if (hmCharCounts.containsKey(c)) {
+                hmCharCounts.put(c, hmCharCounts.get(c) + 1);
             } else {
-                charCounts.put(c, 1);
+                hmCharCounts.put(c, 1);
             }
         }
 
         // loop hasmap finding char with counts equals to 1
         for (int i = 0; i < input.length(); i++) {
             char c = input.charAt(i);
-            if (charCounts.get(c) == 1)
+            if (hmCharCounts.get(c) == 1)
                 return c;
         }
         return '_';
