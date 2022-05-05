@@ -2,7 +2,7 @@ package sort.bubblesort;
 
 import java.util.Random;
 
-class MyBubbleSortAscDesc {
+class BubbleSortAscDesc {
 
     // method for ascending array sort
     static void bubbleSortAscending(int[] numbers) {
