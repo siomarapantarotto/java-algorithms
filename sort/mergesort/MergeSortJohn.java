@@ -3,7 +3,7 @@ package sort.mergesort;
 import java.util.Arrays;
 import java.util.Random;
 
-public class MergeSort {
+public class MergeSortJohn {
 
     // main driver
     public static void main(String[] args) {
