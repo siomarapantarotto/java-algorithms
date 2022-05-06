@@ -4,6 +4,12 @@ import java.util.Arrays;
 
 public class MyMergeSortPractice {
 
+    public static void mergeSort(int[] data) {
+        int start = 0;
+        int end = data.length - 1;
+        mergeSort(data, start, end);
+    }
+
     public static void mergeSort(int[] data, int start, int end) {
 
         if (start < end) {
@@ -40,7 +46,7 @@ public class MyMergeSortPractice {
         int[] data = new int[] { 40, 30, 60, 458, 79, 32, 50, 100 };
 
         System.out.println("Before Merge Sort: " + Arrays.toString(data));
-        mergeSort(data, 0, data.length - 1);
+        mergeSort(data);
         System.out.println("After Merge Sort : " + Arrays.toString(data));
     }
 }
