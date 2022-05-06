@@ -11,7 +11,6 @@ public class MyMergeSortPractice {
     }
 
     private static void mergeSort(int[] data, int start, int end) {
-
         if (start < end) {
             int mid = (start + end) / 2; // find middle
             mergeSort(data, start, mid);

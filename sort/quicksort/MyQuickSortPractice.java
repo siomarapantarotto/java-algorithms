@@ -39,9 +39,10 @@ public class MyQuickSortPractice {
     }
 
     public static void main(String[] args) {
-        int[] data = new int[] { 9, 5, 2, 8, 6, 1, 4 };
+        int[] data = new int[] { 40, 30, 60, 455, 79, 32, 50, 100 };
+
         System.out.println(Arrays.toString(data));
-        quickSort(data, 0, data.length - 1);
+        quickSort(data);
         System.out.println(Arrays.toString(data));
     }
 
