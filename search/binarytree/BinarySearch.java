@@ -1,4 +1,4 @@
-package recursive;
+package search.binarytree;
 
 public class BinarySearch {
 
