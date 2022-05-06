@@ -11,7 +11,6 @@ public class MyQuickSortPractice {
     }
 
     private static void quickSort(int[] data, int start, int end) {
-
         if (start < end) {
             int pivot = partition(data, start, end);
             quickSort(data, start, pivot - 1);
@@ -20,16 +19,12 @@ public class MyQuickSortPractice {
     }
 
     private static int partition(int data[], int start, int end) {
-        System.out.println(Arrays.toString(data));
         int pivot = data[end];
         int grtIndex = (start - 1);
-        System.out.println("\npivot: " + pivot + "\tgrtIndex : " + grtIndex);
 
         for (int j = start; j < end; j++) {
-            System.out.println("J : " + j + "\tgrtIndex : " + grtIndex + " call if()");
             if (data[j] <= pivot) {
                 grtIndex++;
-                System.out.println("grtIndex++ : " + grtIndex + " call swap");
                 swap(data, grtIndex, j);
             }
         }
@@ -38,8 +33,6 @@ public class MyQuickSortPractice {
     }
 
     private static void swap(int[] data, int index1, int index2) {
-        System.out.println("swap data[" + index1 + "]    data: " + data[index1]
-                + "   with    data[" + index2 + "]    data: " + data[index2]);
         int temp = data[index1];
         data[index1] = data[index2];
         data[index2] = temp;
