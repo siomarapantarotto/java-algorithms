@@ -10,7 +10,7 @@ public class MyMergeSortPractice {
         mergeSort(data, start, end);
     }
 
-    public static void mergeSort(int[] data, int start, int end) {
+    private static void mergeSort(int[] data, int start, int end) {
 
         if (start < end) {
             int mid = (start + end) / 2; // find middle
@@ -20,7 +20,7 @@ public class MyMergeSortPractice {
         }
     }
 
-    public static void merge(int[] data, int start, int mid, int end) {
+    private static void merge(int[] data, int start, int mid, int end) {
 
         int[] temp = new int[end - start + 1]; // set correct size
         int i = start, j = mid + 1, k = 0;
@@ -43,7 +43,7 @@ public class MyMergeSortPractice {
     }
 
     public static void main(String[] args) {
-        int[] data = new int[] { 40, 30, 60, 458, 79, 32, 50, 100 };
+        int[] data = new int[] { 40, 30, 60, 455, 79, 32, 50, 100 };
 
         System.out.println("Before Merge Sort: " + Arrays.toString(data));
         mergeSort(data);
