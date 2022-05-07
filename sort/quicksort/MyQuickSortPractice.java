@@ -19,7 +19,6 @@ public class MyQuickSortPractice {
     }
 
     private static int partition(int data[], int start, int end) {
-
         int pivot = data[end];
         int grtIndex = start - 1; // Set according to start, not just -1
 

@@ -33,6 +33,8 @@ public class MyBubbleSortPractice {
 
         System.out.println("Before Bubble Sort:" + Arrays.toString(array));
         bubbleSort(array);
-        System.out.println("Before Bubble Sort:" + Arrays.toString(array));
+        System.out.println("After Bubble Sort :" + Arrays.toString(array));
+
+        // Arrays.stream(array).forEach(System.out::println);
     }
 }
