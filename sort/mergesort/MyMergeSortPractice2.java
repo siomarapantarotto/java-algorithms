@@ -9,7 +9,7 @@ public class MyMergeSortPractice2 {
     }
 
     private static void mergeSort(int[] data, int start, int end) {
-        if (start < end) {
+        if (start < end) { // start with IF(), nothing before
             int mid = (start + end) / 2; // find middle
             mergeSort(data, start, mid);
             mergeSort(data, mid + 1, end);
@@ -34,7 +34,7 @@ public class MyMergeSortPractice2 {
         while (j <= end)
             temp[k++] = data[j++];
 
-        for (i = start; i <= end; i++) {
+        for (i = start; i <= end; i++) { // attention here i starts with start not 0
             data[i] = temp[i - start]; // attention to temp index
         }
 
