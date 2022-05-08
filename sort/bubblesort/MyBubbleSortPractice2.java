@@ -5,7 +5,23 @@ import java.util.Random;
 
 public class MyBubbleSortPractice2 {
 
-    public static void bubbleSort(int[] data)
+    public static void bubbleSort(int[] data) {
+        int dataLength = data.length;
+        boolean swappedSomething = true;
+        int swapBuffer, i;
+
+        while (swappedSomething) {
+            swappedSomething = false;
+            for (i = 0; i < dataLength - 1; i++) { // Attention here is just < not <=
+                if (data[i] > data[i + 1]) {
+                    swapBuffer = data[i];
+                    data[i] = data[i + 1];
+                    data[i + 1] = swapBuffer;
+                    swappedSomething = true;
+                }
+            }
+        }
+    }
 
     public static void main(String[] args) {
         Random random = new Random();
@@ -16,9 +32,9 @@ public class MyBubbleSortPractice2 {
 
         System.out.println("Before Bubble Sort:" + Arrays.toString(data));
         bubbleSort(data);
-        System.out.println("After Bubble Sort :" + Arrays.toString(data));
-
-        // Arrays.stream(array).forEach(System.out::println);
+        //System.out.println("After Bubble Sort :" + Arrays.toString(data));
+        System.out.println("After Bubble Sort :");
+        Arrays.stream(data).forEach(System.out::println);
     }
 
 }
