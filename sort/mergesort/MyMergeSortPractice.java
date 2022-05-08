@@ -5,9 +5,10 @@ import java.util.Arrays;
 public class MyMergeSortPractice {
 
     public static void mergeSort(int[] data) {
-        int start = 0;
-        int end = data.length - 1;
-        mergeSort(data, start, end);
+        // int start = 0;
+        // int end = data.length - 1;
+        // mergeSort(data, start, end);
+        mergeSort(data, 0, data.length - 1);
     }
 
     private static void mergeSort(int[] data, int start, int end) {
@@ -22,7 +23,7 @@ public class MyMergeSortPractice {
     private static void merge(int[] data, int start, int mid, int end) {
 
         int[] temp = new int[end - start + 1]; // set correct size
-        int i = start, j = mid + 1, k = 0;
+        int i = start, j = mid + 1, k = 0; // set i and j to the subarrays starts
 
         while (i <= mid && j <= end) // double condition
             if (data[i] < data[j])
@@ -36,7 +37,7 @@ public class MyMergeSortPractice {
         while (j <= end)
             temp[k++] = data[j++];
 
-        for (i = start; i <= end; i++)
+        for (i = start; i <= end; i++) // attention here, i = start not 0
             data[i] = temp[i - start]; // attention to temp index
 
     }
