@@ -10,7 +10,7 @@ public class MyMergeSortPractice2 {
 
     private static void mergeSort(int[] data, int start, int end) {
         if (start < end) {
-            int mid = (start + end) / 2;
+            int mid = (start + end) / 2; // find middle
             mergeSort(data, start, mid);
             mergeSort(data, mid + 1, end);
             merge(data, start, mid, end);
@@ -19,10 +19,10 @@ public class MyMergeSortPractice2 {
 
     private static void merge(int[] data, int start, int mid, int end) {
 
-        int[] temp = new int[end - start + 1];
-        int i = start, j = mid + 1, k = 0;
+        int[] temp = new int[end - start + 1]; // size correctly
+        int i = start, j = mid + 1, k = 0; // i and j point to the subarrays starts
 
-        while (i <= mid && j <= end)
+        while (i <= mid && j <= end) // double condition
             if (data[i] < data[j])
                 temp[k++] = data[i++];
             else
@@ -35,7 +35,7 @@ public class MyMergeSortPractice2 {
             temp[k++] = data[j++];
 
         for (i = start; i <= end; i++) {
-            data[i] = temp[i - start];
+            data[i] = temp[i - start]; // attention to temp index
         }
 
     }
