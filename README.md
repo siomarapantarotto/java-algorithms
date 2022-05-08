@@ -7,7 +7,7 @@
 
 Hello there!
 
-This repo is under construction!
+This repo will be always under construction!
 
 It serves as a personal lab for me to practice the power of JAVA. Definitely a quick access place for my references.
 
