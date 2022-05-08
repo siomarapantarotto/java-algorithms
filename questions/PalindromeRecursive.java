@@ -1,10 +1,6 @@
-package recursive;
+package questions;
 
-public class Palindrome {
-
-    public static void main(String[] args) {
-        System.out.println(isPalindrome("racecar"));
-    }
+public class PalindromeRecursive {
 
     public static boolean isPalindrome(String input) {
         if (input.length() == 0 || input.length() == 1) {
@@ -17,5 +13,9 @@ public class Palindrome {
 
         // Here different chars were found.
         return false;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isPalindrome("racecar"));
     }
 }
