@@ -9,7 +9,7 @@ Hello there!
 
 This repo will be always under construction!
 
-It serves as a personal lab for me to practice the power of JAVA. Definitely a quick access place for my references.
+It serves as a personal lab for practicing the power of JAVA. Definitely a quick access place for my references.
 
 It also consists basically of isolated classes and focuses fundamentally on algorithms that implement the several data structure operations. 
 
