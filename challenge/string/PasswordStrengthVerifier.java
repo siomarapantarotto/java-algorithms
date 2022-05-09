@@ -8,7 +8,12 @@ public class PasswordStrengthVerifier {
 
     private static int countMissingRules(String password) {
 
-        int missingRules = 5;
+        // First check for minimum required size
+        if (password.length() < 6)
+            return (6 - password.length());
+
+        // Now set controls for checking the 4 remaining rules
+        int missingRules = 4; // lower, upper, digit and special char
 
         boolean hasLower = false, hasUpper = false,
                 hasDigit = false, hasSpecialChar = false;
@@ -17,7 +22,7 @@ public class PasswordStrengthVerifier {
                 Arrays.asList('!', '@', '#', '$', '%', '^', '&',
                         '*', '(', ')', '-', '+'));
 
-        // Loop over input password identifying rules
+        // Loop over input password confirming that required rules are present
         for (char currentChar : password.toCharArray()) {
             if (Character.isLowerCase(currentChar))
                 hasLower = true;
@@ -29,22 +34,23 @@ public class PasswordStrengthVerifier {
                 hasSpecialChar = true;
         }
 
-        if (password.length() >= 6) // Checked rule #1
+        // Now decrement from missig rules the required rules that were present
+        if (hasLower == true) // Checking for rule #1
             missingRules--;
-        if (hasLower == true) // Checked rule #2
+        if (hasUpper == true) // Checking for rule #2
             missingRules--;
-        if (hasUpper == true) // Checked rule #3
+        if (hasDigit == true) // Checking for rule #3
             missingRules--;
-        if (hasDigit == true) // Checked rule #4
-            missingRules--;
-        if (hasSpecialChar == true) // Checked rule #5
+        if (hasSpecialChar == true) // Checking for rule #4
             missingRules--;
 
+        // Return the minimum broken rules for a strong password
         return missingRules;
+
     }
 
     public static void main(String[] args) {
-        String password = "Ab1";
+        String password = "abcdefABC123$";
         int missingRules = countMissingRules(password);
         System.out.println(missingRules);
     }
