@@ -25,11 +25,11 @@ public class MyQuickSortPractice2 {
 
         for (int i = start; i < end; i++) {
             if (data[i] <= pivot) { // check for <=
-                grtIndex++;
-                swap(data, grtIndex, i); // pass the indexes
+                grtIndex++; // increment before swapp here but not bellow
+                swap(data, i, grtIndex); // order of indexes does not matter
             }
         }
-        swap(data, grtIndex + 1, end); // remember to increment (grtIndex + 1)
+        swap(data, end, grtIndex + 1); // remember to increment (grtIndex + 1)
         return grtIndex + 1; // return grtIndex incremented
     }
 
