@@ -1,4 +1,4 @@
-package questions;
+package challenge;
 
 // by siomara.com.br on May, 3 of 2022.
 public class ReverseString {

@@ -1,4 +1,4 @@
-package questions.palindrome;
+package challenge.palindrome;
 
 public class PalindromeForLoop {
 

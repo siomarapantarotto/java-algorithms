@@ -1,4 +1,4 @@
-package questions;
+package challenge;
 
 public class CountNumbersWithSameFirstAndLastDigits {
 

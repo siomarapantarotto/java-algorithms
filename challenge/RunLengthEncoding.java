@@ -1,4 +1,4 @@
-package questions;
+package challenge;
 
 // Time complexity O(n)
 public class RunLengthEncoding {
