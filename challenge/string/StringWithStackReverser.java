@@ -3,7 +3,7 @@ package challenge.string;
 import java.util.Stack;
 
 // by siomara.com.br on May,4th of 2022.
-public class ReverseStringWithStack {
+public class StringWithStackReverser {
 
     public static String reverseString(String input) {
 
