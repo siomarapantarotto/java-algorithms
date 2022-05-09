@@ -1,4 +1,4 @@
-package challenge;
+package challenge.string;
 
 import java.util.Stack;
 
