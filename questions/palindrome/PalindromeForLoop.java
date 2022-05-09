@@ -1,6 +1,6 @@
-package questions;
+package questions.palindrome;
 
-public class PalindromeForLoopOnly {
+public class PalindromeForLoop {
 
     public static boolean isPalindrome(String input) {
 

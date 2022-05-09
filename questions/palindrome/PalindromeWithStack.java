@@ -1,4 +1,4 @@
-package questions;
+package questions.palindrome;
 
 import java.util.Stack;
 
