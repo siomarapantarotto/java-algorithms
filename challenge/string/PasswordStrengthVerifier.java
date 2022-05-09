@@ -8,8 +8,8 @@ public class PasswordStrengthVerifier {
 
     private static int countMissingRules(String password) {
 
-        int missingRules = 0;
-        
+        int missingRules = 5;
+
         boolean hasLower = false, hasUpper = false,
                 hasDigit = false, hasSpecialChar = false;
 
@@ -29,23 +29,25 @@ public class PasswordStrengthVerifier {
                 hasSpecialChar = true;
         }
 
-        if (password.length() < 6)      // Missing rule #1
-            missingRules++;
-        if (hasLower == false)          // Missing rule #2
-            missingRules++;
-        if (hasUpper == false)          // Missing rule #3
-            missingRules++;
-        if (hasDigit == false)          // Missing rule #4
-            missingRules++;
-        if (hasSpecialChar == false)    // Missing rule #5
-            missingRules++;
+        if (password.length() >= 6) // Checked rule #1
+            missingRules--;
+        if (hasLower == true) // Checked rule #2
+            missingRules--;
+        if (hasUpper == true) // Checked rule #3
+            missingRules--;
+        if (hasDigit == true) // Checked rule #4
+            missingRules--;
+        if (hasSpecialChar == true) // Checked rule #5
+            missingRules--;
 
         return missingRules;
     }
 
     public static void main(String[] args) {
-        String password = "";
+        String password = "Ab1";
         int missingRules = countMissingRules(password);
         System.out.println(missingRules);
     }
 }
+
+// https://www.hackerrank.com/challenges/strong-password
