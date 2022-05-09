@@ -1,6 +1,6 @@
 package challenge.string;
 
-public class CountCamelCaseWords {
+public class CamelCaseWordCounter {
 
     public static int countCamelCaseWords(String input) {
 
