@@ -3,7 +3,7 @@ package hashtable;
 import java.util.Arrays;
 import java.util.Hashtable;
 
-public class SumWithHashtable {
+public class SumTwoWithHashtable {
 
     public static String sumTwoViaComplement(int[] array, int target) {
 
