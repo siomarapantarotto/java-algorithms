@@ -5,6 +5,10 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Stack;
 
+/**
+ * Time Complexity: O(n)
+ * Auxiliary Space: O(n) for stack and O(1) for hashSet.
+ */
 public class BalancedParenthesesChecker {
 
     public static boolean checkForBalancedParenthesis(String input) {
@@ -15,14 +19,17 @@ public class BalancedParenthesesChecker {
 
         for (char currentChar : input.toCharArray()) {
 
+            // ignore everything that is not in the set
             if (!set.contains(currentChar))
                 continue;
 
+            // add to stack only ( [ and {
             if (currentChar == '(' || currentChar == '[' || currentChar == '{') {
                 stack.push(currentChar);
                 continue;
             }
 
+            // from now on check closing } ] and )
             if (stack.isEmpty())
                 return false;
 
@@ -40,7 +47,7 @@ public class BalancedParenthesesChecker {
                 stack.pop();
             else if (currentChar == '}' && stack.peek() != '{')
                 return false;
-                
+
         }
 
         // here is balanced for sure
