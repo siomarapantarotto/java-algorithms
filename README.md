@@ -1,4 +1,4 @@
-# Java Algorithms
+# Data Structures - Java Algorithms
 
 <p align='center'>
   <img src="https://img.shields.io/badge/Jakarta-Java-007396?style=for-the-badge&logo=java&logoColor=white" />&nbsp;&nbsp;
@@ -6,7 +6,7 @@
 </p>
 
 <p align='center'>
-  <img src="https://img.shields.io/badge/Jakarta-Java-007396?style=for-the-badge&logo=java&logoColor=white" />&nbsp;&nbsp;
+  <img src="https://user-images.githubusercontent.com/5893219/167912490-2d0c80c9-ba43-4292-9355-f6672f4c3c8d.png" />
 </p>
 
 Hello there!
