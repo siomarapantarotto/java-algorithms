@@ -1,7 +1,7 @@
 # Java Algorithms
 
 <p align='center'>
-  <img src="https://user-images.githubusercontent.com/5893219/167924860-43af8fcf-8a2a-4111-a9b3-2d68f61f7ab4.png" />
+  <img src="https://user-images.githubusercontent.com/5893219/167927023-75da2506-1aa5-4c47-bef4-f4f19c467028.png" />
 </p>
 
 Hello there!
