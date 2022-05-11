@@ -1,8 +1,7 @@
 # Java Algorithms
 
 <p align='center'>
-  <img src="https://img.shields.io/badge/Jakarta-Java-007396?style=for-the-badge&logo=java&logoColor=white" />&nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" />&nbsp;&nbsp;  
+  <img src="https://user-images.githubusercontent.com/5893219/167927023-75da2506-1aa5-4c47-bef4-f4f19c467028.png" />
 </p>
 
 Hello there!
@@ -22,6 +21,11 @@ Feel free to grab some code that might interest you.
 Thanks for stopping by!
 
 siomara.com.br
+
+<p align='center'>
+  <img src="https://img.shields.io/badge/Jakarta-Java-007396?style=for-the-badge&logo=java&logoColor=white" />&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" />&nbsp;&nbsp; 
+</p>
 
 <!-- FOOTER (Author / Visit My Online Resume / Download My PDF Resume) -->
 <hr>
