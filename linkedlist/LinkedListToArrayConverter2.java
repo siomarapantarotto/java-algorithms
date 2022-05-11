@@ -1,38 +1,40 @@
 package linkedlist;
 
-import org.junit.Test;
-
 import java.util.LinkedList;
+import org.junit.Test;
 
 /**
  * Convert Linked List to Array
  */
 public class LinkedListToArrayConverter2 {
 
-    // Test Driven Development by Aseem Jain
+    // TDD - Test Driven Development
     @Test
     public void test() {
+        LinkedList<String> linkedList = new LinkedList<>();
+        linkedList.add("first");
+        linkedList.add("second");
+        linkedList.add("third");
+        linkedList.add("last");
 
-        LinkedList<String> ll = new LinkedList<>();
-        ll.add("first");
-        ll.add("second");
-        ll.add("third");
-        ll.add("last");
-
-        String[] arr = convert(ll);
-        assert 4 == arr.length;
-        assert "first" == arr[0];
-        assert "last" == arr[3];
-
+        String[] array = convertToArray(linkedList);
+        assert 4 == array.length;
+        assert "first" == array[0];
+        assert "second" == array[1];
+        assert "third" == array[2];
+        assert "last" == array[3];
     }
 
-    String[] convert(LinkedList<String> ll) {
-        String[] arr = new String[ll.size()];
+    String[] convertToArray(LinkedList<String> linkedList) {
+
+        String[] array = new String[linkedList.size()];
+
         int i = 0;
-        for (String s : ll) {
-            arr[i++] = s;
+        for (String nodeValue : linkedList) {
+            array[i++] = nodeValue;
         }
-        return arr;
+
+        return array;
     }
 
 }
