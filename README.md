@@ -1,4 +1,4 @@
-# Data Structures - Java Algorithms
+# Java Algorithms
 
 <p align='center'>
   <img src="https://img.shields.io/badge/Jakarta-Java-007396?style=for-the-badge&logo=java&logoColor=white" />&nbsp;&nbsp;
