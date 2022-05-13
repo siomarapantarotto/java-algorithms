@@ -12,6 +12,7 @@ public class BasicLinkedList {
 
     public static void main(String[] args) {
 
+        // Create a new linked list
         LinkedList<Integer> linkedList = new LinkedList<>();
 
         // Print empty LinkedList.
