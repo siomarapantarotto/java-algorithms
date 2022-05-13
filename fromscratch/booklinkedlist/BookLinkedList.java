@@ -29,6 +29,24 @@ public class BookLinkedList {
         head = newBook;
     }
 
+    // Add new node at the end of the Linked List
+    public void addLast(String bookName, int totalSold) {
+        if (isEmpty()) {
+            addFirst(bookName, totalSold);
+        } else {
+            Book newBook = new Book(bookName, totalSold);
+            Book currBook = head;
+            while (currBook != null) {
+                if (currBook.next == null) {
+                    currBook.next = newBook;
+                    break;
+                } else {
+                    currBook = currBook.next;
+                }
+            }
+        }
+    }
+
     public Book removeFirst() {
         Book bookRef = head;
         if (!isEmpty()) {

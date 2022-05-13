@@ -68,9 +68,36 @@ public class BookLinkedListMainDriver {
         bookLkList.traversePrinting();
         System.out.println();
 
+        System.out.println("addLast(bookName, totalSold)");
+        bookLkList.addLast("6 The Lord of the Rings", 600);
+        System.out.println();
+
+        System.out.println("Traverse and print linked list:");
+        bookLkList.traversePrinting();
+        System.out.println();
+
         System.out.println("clear() linked list");
         bookLkList.clear();
         System.out.println("clear() is complete");
+        System.out.println();
+
+        System.out.println("Traverse and print linked list:");
+        bookLkList.traversePrinting();
+        System.out.println();
+
+        System.out.println("addLast(bookName, totalSold)");
+        bookLkList.addLast("7 The Last One After Clear", 700);
+        System.out.println();
+
+        System.out.println("Traverse and print linked list:");
+        bookLkList.traversePrinting();
+        System.out.println();
+
+        System.out.println("addLast(bookName, totalSold) 8, 9 and 10");
+        bookLkList.addLast("8 The Book number 8", 800);
+        bookLkList.addLast("9 The Book number 9", 900);
+        bookLkList.addLast("10 The Book number 10", 1000);
+
         System.out.println();
 
         System.out.println("Traverse and print linked list:");
