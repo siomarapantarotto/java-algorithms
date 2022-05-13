@@ -2,17 +2,24 @@ package fromscratch.booklinkedlist;
 
 public class BookLinkedList {
 
-    // One attribute for head node.
+    // Set head node
     public Book head;
 
-    // Constructor enforcing an empty linked list.
+    // Constructor enforcing an empty linked list
     public BookLinkedList() {
-        head = null; // head is alredy created as null but.....
+        head = null; // not really necessary but it's not gonna hurt
     }
 
-    // Check if linked list is empty or not.
+    // Check if linked list is empty or not
     public boolean isEmpty() {
         return (head == null);
+    }
+
+    // Clear linked list
+    public void clear() {
+        while (!isEmpty()) {
+            removeFirst();
+        }
     }
 
     // Add new node at the beginning of the Linked List
@@ -33,22 +40,22 @@ public class BookLinkedList {
     }
 
     public Book removeBook(String bookName) {
-        Book currentBook = head;
-        Book previousBook = head;
-        while (currentBook.name != bookName) {
-            if (currentBook.next == null) {
+        Book currBook = head;
+        Book prevBook = head;
+        while (currBook.name != bookName) {
+            if (currBook.next == null) {
                 return null;
             } else {
-                previousBook = currentBook;
-                currentBook = currentBook.next;
+                prevBook = currBook;
+                currBook = currBook.next;
             }
         }
-        if (currentBook == head) {
+        if (currBook == head) {
             head = head.next;
         } else {
-            previousBook.next = currentBook.next;
+            prevBook.next = currBook.next;
         }
-        return currentBook;
+        return currBook;
     }
 
     // Traverse printing each node and its next one.
@@ -74,7 +81,7 @@ public class BookLinkedList {
                 }
             }
         } else {
-            System.out.println("Empty Booked List");
+            System.out.println("The book linked List is empty");
         }
         return currBook;
     }

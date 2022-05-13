@@ -66,6 +66,15 @@ public class BookLinkedListMainDriver {
         bookLkList.traversePrinting();
         System.out.println();
 
+        System.out.println("Clear linked list:");
+        bookLkList.clear();
+        System.out.println("Clear is complete.");
+        System.out.println();
+
+        System.out.println("Traverse and print linked list:");
+        bookLkList.traversePrinting();
+        System.out.println();
+
     }
 
 }
