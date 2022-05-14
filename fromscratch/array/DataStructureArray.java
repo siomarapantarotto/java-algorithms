@@ -1,4 +1,4 @@
-package array;
+package fromscratch.array;
 
 public class DataStructureArray {
 
