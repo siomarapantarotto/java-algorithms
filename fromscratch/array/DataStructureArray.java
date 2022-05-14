@@ -43,6 +43,7 @@ public class DataStructureArray {
     }
 
     // perfom linear search for a specific value
+    // slower but retrieves all indexes with the value
     public String linearSearchForValue(int value) {
         boolean valueInArray = false;
         String indexWithValue = "";
@@ -56,6 +57,30 @@ public class DataStructureArray {
             return indexWithValue;
         else
             return "none";
+    }
+
+    // perfom binary search for a specific value
+    // faster but retrieves just first index with the value
+    public int binarySearchForValue(int value) {
+        int start = 0;
+        int end = arraySize - 1;
+        while (start <= end) {
+            int mid = (end + start) / 2;
+            System.out.println(mid);
+
+            if (value == array[mid]) {
+                System.out.println(mid + " - " + array[mid]);
+                return mid;
+            }
+
+            if (value < array[mid]) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+
+        }
+        return -1;
     }
 
     // add an new index/element into array
@@ -73,6 +98,20 @@ public class DataStructureArray {
                 array[i] = array[i + 1];
             }
             arraySize--;
+        }
+    }
+
+    // bubble sort the array
+    public void bubbleSort() {
+        int i, j, temp;
+        for (i = arraySize - 1; i > 1; i--) {
+            for (j = 0; j < i; j++) {
+                if (array[j] > array[j + 1]) {
+                    temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
         }
     }
 
@@ -105,6 +144,15 @@ public class DataStructureArray {
 
         System.out.println("\n====> linearSearchForValue(10)");
         System.out.println("The value was found in the following indexes: " + arr.linearSearchForValue(10));
+
+        System.out.println("\n====> bubbleSort()");
+        arr.bubbleSort();
+        arr.printArray();
+
+        int bSearchIndex = arr.binarySearchForValue(17);
+        System.out.println(bSearchIndex == -1
+                ? "Not found"
+                : "Found a match for 17 at index " + bSearchIndex);
 
     }
 
