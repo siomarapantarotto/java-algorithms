@@ -5,17 +5,17 @@ public class DataStructureArray {
     // create attribute array with 50 boxes
     private int[] array = new int[50];
 
-    // stores array size to avoid printing the default values
+    // store array size to avoid printing the default values
     private int arraySize = 10;
 
-    // generates double random values casting to int
+    // generate double random values to array casting to int
     public void generateRandomArray() {
         for (int i = 0; i < arraySize; i++) {
             array[i] = (int) (Math.random() * 10) + 10;
         }
     }
 
-    // prints the array content
+    // print array content
     public void printArray() {
         System.out.println("----------");
         for (int i = 0; i < arraySize; i++) {
@@ -34,7 +34,7 @@ public class DataStructureArray {
             return -1;
     }
 
-    // check if arrays contains a certain value
+    // check if array contains a certain value
     public boolean containsValue(int searchValue) {
         boolean valueInArray = false;
         for (int i = 0; i < arraySize; i++) {
@@ -44,6 +44,7 @@ public class DataStructureArray {
         return valueInArray;
     }
 
+    // perfom linear search for a specific value
     public String linearSearchForValue(int value) {
         boolean valueInArray = false;
         String indexWithValue = "";
@@ -59,7 +60,7 @@ public class DataStructureArray {
             return "none";
     }
 
-    // add an index/element into array
+    // add an new index/element into array
     public void insertValue(int value) {
         if (arraySize < 50) {
             array[arraySize] = value;
@@ -67,17 +68,17 @@ public class DataStructureArray {
         }
     }
 
-    // delete an index/element from array
+    // delete an exinting index/element from array
     public void deleteIndex(int index) {
         if (index < arraySize) {
             for (int i = index; i < arraySize - 1; i++) {
                 array[i] = array[i + 1];
             }
-            // array[arraySize - 1] = 0;
             arraySize--;
         }
     }
 
+    // main driver method
     public static void main(String[] args) {
 
         DataStructureArray arr = new DataStructureArray();
@@ -86,25 +87,25 @@ public class DataStructureArray {
 
         arr.printArray();
 
-        int index = arr.getValueAtIndex(9);
-        System.out.println(index == -1
+        int valueAtIndex = arr.getValueAtIndex(9);
+        System.out.println(valueAtIndex == -1
                 ? "Index out of bounds"
-                : "The value at index is: " + index);
+                : "The value at index 9 is: " + valueAtIndex);
 
         boolean contain = arr.containsValue(14);
         System.out.println(contain
-                ? contain + " - Array contains value"
-                : contain + " - Array DOES NOT contain value");
+                ? contain + " - Array contains value 14"
+                : contain + " - Array DOES NOT contain value 14");
 
-        System.out.println("====> deleteIndex(3)");
+        System.out.println("\n====> deleteIndex(3)");
         arr.deleteIndex(3);
         arr.printArray();
 
-        System.out.println("====> insertValue(55)");
+        System.out.println("\n====> insertValue(55)");
         arr.insertValue(55);
         arr.printArray();
 
-        System.out.println("====> linearSearchForValue(10)");
+        System.out.println("\n====> linearSearchForValue(10)");
         System.out.println("The value was found in the following indexes: " + arr.linearSearchForValue(10));
 
     }
