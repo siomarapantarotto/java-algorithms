@@ -3,7 +3,7 @@ package sort.bubblesort;
 import java.util.Arrays;
 import java.util.Random;
 
-public class BubbleSorter {
+public class BubbleSort {
 
     public void sort(int[] data) {
         int dataLengthMinusOne = data.length - 1;
@@ -25,7 +25,7 @@ public class BubbleSorter {
 
     public static void main(String[] args) {
         // create bubble sorter object
-        BubbleSorter bubbleSorter = new BubbleSorter();
+        BubbleSort bubbleSorter = new BubbleSort();
 
         // create an array and generate random values
         int[] data = new int[10];
