@@ -19,9 +19,7 @@ public class DataStructureArray {
     public void printArray() {
         System.out.println("----------");
         for (int i = 0; i < arraySize; i++) {
-            // System.out.println("| " + i + " | " + array[i] + " |");
-            System.out.print("| " + i + " | ");
-            System.out.println(array[i] + " |");
+            System.out.println("| " + i + " | " + array[i] + " |");
             System.out.println("----------");
         }
     }
@@ -89,13 +87,13 @@ public class DataStructureArray {
 
         int valueAtIndex = arr.getValueAtIndex(9);
         System.out.println(valueAtIndex == -1
-                ? "Index out of bounds"
-                : "The value at index 9 is: " + valueAtIndex);
+                ? "\nIndex out of bounds"
+                : "\nThe value at index 9 is: " + valueAtIndex);
 
         boolean contain = arr.containsValue(14);
         System.out.println(contain
-                ? contain + " - Array contains value 14"
-                : contain + " - Array DOES NOT contain value 14");
+                ? "\n" + contain + " - Array contains value 14"
+                : "\ncls" + contain + " - Array DOES NOT contain value 14");
 
         System.out.println("\n====> deleteIndex(3)");
         arr.deleteIndex(3);
