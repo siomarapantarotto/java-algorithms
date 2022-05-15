@@ -43,7 +43,8 @@ public class DataStructureArray {
     }
 
     // perfom linear search for a specific value
-    // slower but retrieves all indexes with the value
+    // slower but retrieves all indexes with the search value
+    // the array does not need to be sorted to run this method
     public String linearSearchForValue(int value) {
         boolean valueInArray = false;
         String indexWithValue = "";
@@ -60,7 +61,8 @@ public class DataStructureArray {
     }
 
     // perfom binary search for a specific value
-    // faster but retrieves just first index with the value
+    // faster but retrieves just first index with the search value
+    // the array must be sorted before running this method
     public int binarySearchForValue(int value) {
         int start = 0;
         int end = arraySize - 1;
@@ -103,16 +105,36 @@ public class DataStructureArray {
 
     // bubble sort the array
     public void bubbleSort() {
-        int i, j, temp;
+        int i, j; // , temp;
         for (i = arraySize - 1; i > 1; i--) {
             for (j = 0; j < i; j++) {
                 if (array[j] > array[j + 1]) {
-                    temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
+                    // temp = array[j];
+                    // array[j] = array[j + 1];
+                    // array[j + 1] = temp;
+                    swap(j, j + 1);
                 }
             }
         }
+    }
+
+    // bubble sort the array
+    public void selectionSort() {
+        for (int x = 0; x < arraySize; x++) {
+            int minimum = x;
+            for (int j = x; j < arraySize; j++) {
+                if (array[minimum] > array[j]) {
+                    minimum = j;
+                }
+            }
+            swap(x, minimum);
+        }
+    }
+
+    public void swap(int indexOne, int indexTwo) {
+        int temp = array[indexOne];
+        array[indexOne] = array[indexTwo];
+        array[indexTwo] = temp;
     }
 
     // main driver method
@@ -145,8 +167,12 @@ public class DataStructureArray {
         System.out.println("\n====> linearSearchForValue(10)");
         System.out.println("The value was found in the following indexes: " + arr.linearSearchForValue(10));
 
-        System.out.println("\n====> bubbleSort()");
-        arr.bubbleSort();
+        // System.out.println("\n====> bubbleSort()");
+        // arr.bubbleSort();
+        // arr.printArray();
+
+        System.out.println("\n====> selectionSort()");
+        arr.selectionSort();
         arr.printArray();
 
         int bSearchIndex = arr.binarySearchForValue(17);
