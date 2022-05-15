@@ -9,14 +9,15 @@ public class SelectionSortDebug {
         int minimum, temp;
 
         for (int x = 0; x < array.length; x++) {
-            System.out.println("x: array[" + x + "] = " + array[x]);
+            System.out.println("\nx: array[" + x + "] = " + array[x]);
             minimum = x;
             System.out.println("minimum = x; " + minimum);
 
-            for (int y = x; y < array.length; y++) {
+            for (int y = x + 1; y < array.length; y++) {
                 System.out.println("y: array[" + y + "] = " + array[y]);
                 if (array[minimum] > array[y]) {
-                    System.out.println("=======> array[" + minimum + "] > array[" + y + "]");
+                    System.out.println("=======> array[" + minimum + "] = " + array[minimum]
+                            + " > array[" + y + "] = " + array[y]);
                     minimum = y;
                     System.out.println("minimum = y; " + minimum);
                 }
@@ -26,7 +27,7 @@ public class SelectionSortDebug {
             temp = array[x];
             array[x] = array[minimum];
             array[minimum] = temp;
-            System.out.println("After swap: " + Arrays.toString(array));
+            System.out.println("After  swap: " + Arrays.toString(array));
         }
     }
 

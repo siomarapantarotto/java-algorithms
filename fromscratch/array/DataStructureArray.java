@@ -3,6 +3,8 @@ package fromscratch.array;
 public class DataStructureArray {
 
     // create attribute array with 50 boxes
+    // private int[] array = new int[] { 100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90
+    // } // array used to fix bubble sort;
     private int[] array = new int[50];
 
     // store array size to avoid printing the default values
@@ -106,7 +108,7 @@ public class DataStructureArray {
     // bubble sort the array
     public void bubbleSort() {
         int i, j; // , temp;
-        for (i = arraySize - 1; i > 1; i--) {
+        for (i = arraySize - 1; i > 0; i--) {
             for (j = 0; j < i; j++) {
                 if (array[j] > array[j + 1]) {
                     // temp = array[j];
@@ -122,7 +124,7 @@ public class DataStructureArray {
     public void selectionSort() {
         for (int x = 0; x < arraySize; x++) {
             int minimum = x;
-            for (int j = x; j < arraySize; j++) {
+            for (int j = x + 1; j < arraySize; j++) {
                 if (array[minimum] > array[j]) {
                     minimum = j;
                 }
@@ -167,17 +169,17 @@ public class DataStructureArray {
         System.out.println("\n====> linearSearchForValue(10)");
         System.out.println("The value was found in the following indexes: " + arr.linearSearchForValue(10));
 
-        // System.out.println("\n====> bubbleSort()");
-        // arr.bubbleSort();
-        // arr.printArray();
-
-        System.out.println("\n====> selectionSort()");
-        arr.selectionSort();
+        System.out.println("\n====> bubbleSort()");
+        arr.bubbleSort();
         arr.printArray();
+
+        // System.out.println("\n====> selectionSort()");
+        // arr.selectionSort();
+        // arr.printArray();
 
         int bSearchIndex = arr.binarySearchForValue(17);
         System.out.println(bSearchIndex == -1
-                ? "Not found"
+                ? "17 Not found"
                 : "Found a match for 17 at index " + bSearchIndex);
 
     }
