@@ -63,10 +63,10 @@ public class ArrayBigONotation {
                 indexesWithValue += i + " ";
             }
         }
-        // System.out.println(valueInArray
-        // ? "Linear Search found a match for " + value
-        // + " at indexes: \n" + indexesWithValue
-        // : "Linear Search found NO match for " + value);
+        System.out.println(valueInArray
+                ? "Linear Search found a match for " + value
+                        + " at indexes: \n" + indexesWithValue
+                : "Linear Search found NO match for " + value);
     }
 
     /**
