@@ -1,10 +1,10 @@
 package fromscratch.array;
 
+import java.util.Arrays;
+
 public class DataStructureArray {
 
     // create attribute array with 50 boxes
-    // private int[] array = new int[] { 100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90
-    // } // array used to fix bubble sort;
     private int[] array = new int[50];
 
     // store array size to avoid printing the default values
@@ -17,12 +17,37 @@ public class DataStructureArray {
         }
     }
 
-    // print array content
+    // print array vertically in cells
+    // public void printArray() {
+    // System.out.println("----------");
+    // for (int i = 0; i < arraySize; i++) {
+    // System.out.println("| " + i + " | " + array[i] + " |");
+    // System.out.println("----------");
+    // }
+    // }
+
     public void printArray() {
-        System.out.println("----------");
         for (int i = 0; i < arraySize; i++) {
-            System.out.println("| " + i + " | " + array[i] + " |");
-            System.out.println("----------");
+            System.out.print("[i: " + i + " v: " + array[i] + "] ");
+        }
+        System.out.println();
+    }
+
+    // delete an exinting index/element from array
+    public void deleteIndex(int index) {
+        if (index < arraySize) {
+            for (int i = index; i < arraySize - 1; i++) {
+                array[i] = array[i + 1];
+            }
+            arraySize--;
+        }
+    }
+
+    // add an new index/element into array
+    public void insertValue(int value) {
+        if (arraySize < 50) {
+            array[arraySize] = value;
+            arraySize++;
         }
     }
 
@@ -70,7 +95,7 @@ public class DataStructureArray {
         int end = arraySize - 1;
         while (start <= end) {
             int mid = (end + start) / 2;
-            System.out.println(mid);
+            System.out.println("mid = " + mid);
 
             if (value == array[mid]) {
                 System.out.println(mid + " - " + array[mid]);
@@ -87,25 +112,21 @@ public class DataStructureArray {
         return -1;
     }
 
-    // add an new index/element into array
-    public void insertValue(int value) {
-        if (arraySize < 50) {
-            array[arraySize] = value;
-            arraySize++;
-        }
-    }
-
-    // delete an exinting index/element from array
-    public void deleteIndex(int index) {
-        if (index < arraySize) {
-            for (int i = index; i < arraySize - 1; i++) {
-                array[i] = array[i + 1];
+    // insertion sort (best of all the elementary sort)
+    // time complexity: best Ω(n) average θ(n^2) worst O(n^2)
+    public void insertionSort() {
+        for (int i = 1; i < arraySize; i++) {
+            int j = i;
+            int toInsert = array[i];
+            while ((j > 0) && (array[j - 1] > toInsert)) {
+                array[j] = array[j - 1];
+                j--;
             }
-            arraySize--;
+            array[j] = toInsert;
         }
     }
 
-    // bubble sort the array
+    // bubble sort - time complexity O(n^2) - horrible
     public void bubbleSort() {
         int i, j; // , temp;
         for (i = arraySize - 1; i > 0; i--) {
@@ -117,7 +138,7 @@ public class DataStructureArray {
         }
     }
 
-    // bubble sort the array
+    // selection sort - time complexity O(n^2) - horrible
     public void selectionSort() {
         for (int x = 0; x < arraySize; x++) {
             int minimum = x;
@@ -141,39 +162,56 @@ public class DataStructureArray {
 
         DataStructureArray arr = new DataStructureArray();
 
+        System.out.println("\n==========> generateRandomArray()");
         arr.generateRandomArray();
-
         arr.printArray();
+        // System.out.println(Arrays.toString(arr.array));
 
+        System.out.println("\n==========> getValueAtIndex(9)");
         int valueAtIndex = arr.getValueAtIndex(9);
         System.out.println(valueAtIndex == -1
                 ? "\nIndex out of bounds"
                 : "\nThe value at index 9 is: " + valueAtIndex);
 
+        System.out.println("\n==========> containsValue(14)");
         boolean contain = arr.containsValue(14);
         System.out.println(contain
                 ? "\n" + contain + " - Array contains value 14"
-                : "\ncls" + contain + " - Array DOES NOT contain value 14");
+                : "\n" + contain + " - Array DOES NOT contain value 14");
 
-        System.out.println("\n====> deleteIndex(3)");
+        System.out.println("\n==========> deleteIndex(3)");
         arr.deleteIndex(3);
         arr.printArray();
+        // System.out.println(Arrays.toString(arr.array));
 
-        System.out.println("\n====> insertValue(55)");
+        System.out.println("\n==========> insertValue(55)");
         arr.insertValue(55);
         arr.printArray();
+        // System.out.println(Arrays.toString(arr.array));
 
-        System.out.println("\n====> linearSearchForValue(10)");
-        System.out.println("The value was found in the following indexes: " + arr.linearSearchForValue(10));
+        System.out.println("\n==========> linearSearchForValue(10)");
+        System.out.println("The value was found in the following indexes: "
+                + arr.linearSearchForValue(10));
 
-        System.out.println("\n====> bubbleSort()");
-        arr.bubbleSort();
+        System.out.println("\n==========> insertionSort()");
         arr.printArray();
+        arr.insertionSort();
+        arr.printArray();
+        // System.out.println(Arrays.toString(arr.array));
 
-        // System.out.println("\n====> selectionSort()");
+        // System.out.println("\n==========> bubbleSort()");
+        // arr.printArray();
+        // arr.bubbleSort();
+        // arr.printArray();
+        // System.out.println(Arrays.toString(arr.array));
+
+        // System.out.println("\n==========> selectionSort()");
+        // arr.printArray();
         // arr.selectionSort();
         // arr.printArray();
+        // System.out.println(Arrays.toString(arr.array));
 
+        System.out.println("\n==========> binarySearchForValue(17)");
         int bSearchIndex = arr.binarySearchForValue(17);
         System.out.println(bSearchIndex == -1
                 ? "17 Not found"
