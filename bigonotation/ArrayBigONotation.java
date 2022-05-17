@@ -1,7 +1,16 @@
-package fromscratch.array;
+package bigonotation;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 
+/**
+ * O(1) is EXCELLENT
+ * O(log n) is GOOD
+ * O(n) is FAIR
+ * O(n log n) => BAD
+ * O(n^2) is HORRIBLE (should be avoided)
+ * O(2^n) is HORRIBLE (should be avoided)
+ * O(n!) is HORRIBLE (should be avoided)
+ */
 public class ArrayBigONotation {
 
     private int[] array;
@@ -10,14 +19,20 @@ public class ArrayBigONotation {
     static long startTime;
     static long endTime;
 
-    // constructor
+    /**
+     * Constructor
+     * Create the array and set the array size attribute.
+     */
     ArrayBigONotation(int size) {
         arraySize = size;
         array = new int[size];
     }
 
-    // fill up the array only to the penultimate position
-    // the last position will be added later to show O(1)
+    /**
+     * Generate random values to populate the array.
+     * Fill up the array only to the penultimate position.
+     * The last position will be added in main() to show O(1).
+     */
     public void generateRandomArray() {
         for (int i = 0; i < arraySize - 1; i++) {
             array[i] = (int) (Math.random() * 1000) + 10;
@@ -25,7 +40,10 @@ public class ArrayBigONotation {
         itemsInArray = arraySize - 1; // penultimate position
     }
 
-    // O(1) - excellent scenario
+    /**
+     * Add new element to array.
+     * O(1) - EXCELLENT scenario.
+     */
     public void addItemToArray(int newItem) {
         startTime = System.currentTimeMillis();
         array[itemsInArray++] = newItem;
@@ -37,14 +55,13 @@ public class ArrayBigONotation {
      * Binary Search Algorithm
      * 
      * Time complexity:
-     * ==> Average : O(log N)
-     * ==> Best-case : O(1) if mid index matches desired value 1st time
-     * ==> Worst-case: values at either extremity of the list or not found
+     * ==> Average : O(log N) - FAIR scenario.
+     * ==> Best-case : O(1) if mid index matches desired value 1st time.
+     * ==> Worst-case: values at either extremity of the list or not found.
      * 
      * Space complexity:
-     * ==> iterative method: O(1)
-     * ==> recursive method: O(log N) (stack)
-     * 
+     * ==> iterative method: O(1) - EXCELLENT.
+     * ==> recursive method: O(log N) (stack) - GOOD.
      */
     public void binarySearchForValue(int value) {
         int start = 0;
@@ -73,12 +90,12 @@ public class ArrayBigONotation {
     }
 
     /**
-     * O(N log N)
+     * Quick Sort Algorithm
+     * O(N log N) - BAD
      * 
      * comparisons = log n!
      * comparisons = log n + log (n - 1) + .... log(1)
      * comparisons = n log n
-     * 
      */
     public void quickSort(int start, int end) {
         if (end - start <= 0) { // all sorted
@@ -103,9 +120,6 @@ public class ArrayBigONotation {
             if (leftPointer >= rightPointer) {
                 break;
             } else {
-                // int temp = array[startPointer];
-                // array[startPointer] = array[endPointer];
-                // array[endPointer] = temp;
                 swapValues(leftPointer, rightPointer);
             }
         }
@@ -113,7 +127,10 @@ public class ArrayBigONotation {
         return leftPointer;
     }
 
-    // O(N) - fair scenario
+    /**
+     * Linear Search Algorithm
+     * O(N) - FAIR scenario
+     */
     public void linearSearchForValue(int value) {
         boolean valueInArray = false;
         String indexesWithValue = "";
@@ -131,7 +148,10 @@ public class ArrayBigONotation {
         System.out.println("Linear Search took: " + (endTime - startTime) + " ms");
     }
 
-    // O(N^2) - horrible scenario - should be avoided
+    /**
+     * Bubble Sort Algorithm
+     * O(N^2) - HORRIBLE scenario - should be avoided
+     */
     public void bubbleSort() {
         startTime = System.currentTimeMillis();
         int i, j, temp;
@@ -148,66 +168,87 @@ public class ArrayBigONotation {
         System.out.println("Bubble Sort took: " + (endTime - startTime) + " ms");
     }
 
-    public void swapValues(int indexOne, int indexTwo) {
-        int temp = array[indexOne];
-        array[indexOne] = array[indexTwo];
-        array[indexTwo] = temp;
+    public void swapValues(int index1, int index2) {
+        int temp = array[index1];
+        array[index1] = array[index2];
+        array[index2] = temp;
     }
 
     public static void main(String[] args) {
 
-        ArrayBigONotation testAlgoArray1 = new ArrayBigONotation(10000);
+        ////////////////////////////////////////////////////////////////////////
+        // Create arrays, populate with random values and print total items
+        //
+        ArrayBigONotation testAlgoArray1 = new ArrayBigONotation(100000);
         testAlgoArray1.generateRandomArray();
         System.out.println("itemsInArray: " + testAlgoArray1.itemsInArray);
 
-        ArrayBigONotation testAlgoArray2 = new ArrayBigONotation(30000);
+        ArrayBigONotation testAlgoArray2 = new ArrayBigONotation(300000);
         testAlgoArray2.generateRandomArray();
         System.out.println("itemsInArray: " + testAlgoArray2.itemsInArray);
 
-        ArrayBigONotation testAlgoArray3 = new ArrayBigONotation(80000);
+        ArrayBigONotation testAlgoArray3 = new ArrayBigONotation(800000);
         testAlgoArray3.generateRandomArray();
         System.out.println("itemsInArray: " + testAlgoArray3.itemsInArray);
 
         System.out.println();
 
-        // O(1) - excellent scenario
+        ////////////////////////////////////////////////////////////////////////
+        // Add Item To Array
+        // O(1) - EXCELLENT scenario
+        //
         testAlgoArray1.addItemToArray(123);
         testAlgoArray2.addItemToArray(123);
         testAlgoArray3.addItemToArray(123);
 
         System.out.println();
 
-        // O(N) - fair scenario
+        ////////////////////////////////////////////////////////////////////////
+        // Linear Search For Value
+        // O(N) - FAIR scenario
+        //
         testAlgoArray1.linearSearchForValue(20);
         testAlgoArray2.linearSearchForValue(20);
         testAlgoArray3.linearSearchForValue(20);
 
         System.out.println();
 
-        // // O(N^2) - horrible scenario
+        ////////////////////////////////////////////////////////////////////////
+        // Bubble Sort
+        // O(N^2) - HORRIBLE scenario
+        //
         // testAlgoArray1.bubbleSort();
         // testAlgoArray2.bubbleSort();
         // testAlgoArray3.bubbleSort();
 
-        // O(N log N) - bad scenario
+        ////////////////////////////////////////////////////////////////////////
+        // Quick Sort
+        // O(N log N) - BAD scenario
+        //
         startTime = System.currentTimeMillis();
         testAlgoArray1.quickSort(0, testAlgoArray1.itemsInArray - 1);
         endTime = System.currentTimeMillis();
         System.out.println("Quick Sort took: " + (endTime - startTime) + " ms");
+        // System.out.println(Arrays.toString(testAlgoArray1.array));
 
         startTime = System.currentTimeMillis();
         testAlgoArray2.quickSort(0, testAlgoArray2.itemsInArray - 1);
         endTime = System.currentTimeMillis();
         System.out.println("Quick Sort took: " + (endTime - startTime) + " ms");
+        // System.out.println(Arrays.toString(testAlgoArray2.array));
 
         startTime = System.currentTimeMillis();
         testAlgoArray3.quickSort(0, testAlgoArray3.itemsInArray - 1);
         endTime = System.currentTimeMillis();
         System.out.println("Quick Sort took: " + (endTime - startTime) + " ms");
+        // System.out.println(Arrays.toString(testAlgoArray3.array));
 
         System.out.println();
 
-        // O(log N) - good scenario
+        ////////////////////////////////////////////////////////////////////////
+        // Binary Search For Value
+        // O(log N) - GOOD scenario
+        //
         testAlgoArray1.binarySearchForValue(20);
         testAlgoArray2.binarySearchForValue(20);
         testAlgoArray3.binarySearchForValue(20);
