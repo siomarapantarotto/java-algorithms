@@ -1,6 +1,6 @@
 package bigonotation;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 
 //import java.util.Arrays;
 
@@ -64,8 +64,8 @@ public class ArrayBigONotation {
             }
         }
         // System.out.println(valueInArray
-        // ? "Linear Search found a match for " + value + " at indexes: " +
-        // indexesWithValue
+        // ? "Linear Search found a match for " + value
+        // + " at indexes: \n" + indexesWithValue
         // : "Linear Search found NO match for " + value);
     }
 
@@ -172,6 +172,8 @@ public class ArrayBigONotation {
         ////////////////////////////////////////////////////////////////////////
         // Create arrays, populate with random values and print total items
         //
+        System.out.println();
+
         ArrayBigONotation testAlgoArray1 = new ArrayBigONotation(100000);
         testAlgoArray1.generateRandomArray();
         System.out.println("Items in Array 1: " + testAlgoArray1.itemsInArray);
@@ -184,12 +186,12 @@ public class ArrayBigONotation {
         testAlgoArray3.generateRandomArray();
         System.out.println("Items in Array 3: " + testAlgoArray3.itemsInArray);
 
-        System.out.println();
-
         ////////////////////////////////////////////////////////////////////////
         // Add Item To Array
         // O(1) - EXCELLENT scenario
         //
+        System.out.println();
+
         startTime = System.currentTimeMillis();
         testAlgoArray1.addItemToArray(123);
         endTime = System.currentTimeMillis();
@@ -208,28 +210,27 @@ public class ArrayBigONotation {
         System.out.println("Adding new item to array 3 took: " + (endTime - startTime) + " ms");
         // System.out.println(Arrays.toString(testAlgoArray3.array));
 
-        System.out.println();
-
         ////////////////////////////////////////////////////////////////////////
         // Linear Search For Value
         // O(N) - FAIR scenario
         //
+        System.out.println();
         startTime = System.currentTimeMillis();
         testAlgoArray1.linearSearchForValue(20);
         endTime = System.currentTimeMillis();
         System.out.println("Linear Search 1 took: " + (endTime - startTime) + " ms");
 
+        System.out.println();
         startTime = System.currentTimeMillis();
         testAlgoArray2.linearSearchForValue(20);
         endTime = System.currentTimeMillis();
         System.out.println("Linear Search 2 took: " + (endTime - startTime) + " ms");
 
+        System.out.println();
         startTime = System.currentTimeMillis();
         testAlgoArray3.linearSearchForValue(20);
         endTime = System.currentTimeMillis();
         System.out.println("Linear Search 3 took: " + (endTime - startTime) + " ms");
-
-        System.out.println();
 
         ////////////////////////////////////////////////////////////////////////
         // Bubble Sort
@@ -256,6 +257,8 @@ public class ArrayBigONotation {
         // Quick Sort
         // O(N log N) - BAD scenario
         //
+        System.out.println();
+
         startTime = System.currentTimeMillis();
         testAlgoArray1.quickSort(0, testAlgoArray1.itemsInArray - 1);
         endTime = System.currentTimeMillis();
@@ -274,13 +277,10 @@ public class ArrayBigONotation {
         System.out.println("Quick Sort 3 took: " + (endTime - startTime) + " ms");
         // System.out.println(Arrays.toString(testAlgoArray3.array));
 
-        System.out.println();
-
         ////////////////////////////////////////////////////////////////////////
         // Binary Search For Value (array must be sorted)
         // O(log N) - GOOD scenario
         //
-
         System.out.println();
         startTime = System.currentTimeMillis();
         testAlgoArray1.binarySearchForValue(20);
