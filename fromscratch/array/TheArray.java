@@ -2,7 +2,7 @@ package fromscratch.array;
 
 //import java.util.Arrays;
 
-public class DataStructureArray {
+public class TheArray {
 
     // create attribute array with 50 boxes
     private int[] array = new int[50];
@@ -160,7 +160,7 @@ public class DataStructureArray {
     // main driver method
     public static void main(String[] args) {
 
-        DataStructureArray arr = new DataStructureArray();
+        TheArray arr = new TheArray();
 
         System.out.println("\n==========> generateRandomArray()");
         arr.generateRandomArray();
