@@ -18,13 +18,13 @@ public class TheArray {
     }
 
     // print array vertically in cells
-    // public void printArray() {
-    // System.out.println("----------");
-    // for (int i = 0; i < arraySize; i++) {
-    // System.out.println("| " + i + " | " + array[i] + " |");
-    // System.out.println("----------");
-    // }
-    // }
+    public void printArrayVertically() {
+        System.out.println("----------");
+        for (int i = 0; i < arraySize; i++) {
+            System.out.println("| " + i + " | " + array[i] + " |");
+            System.out.println("----------");
+        }
+    }
 
     public void printArray() {
         for (int i = 0; i < arraySize; i++) {
