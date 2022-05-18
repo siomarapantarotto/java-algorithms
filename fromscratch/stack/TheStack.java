@@ -61,6 +61,8 @@ public class TheStack {
     public String pop() {
         if (topIndexOfStack >= 0) {
             String popValue = getStackArray()[topIndexOfStack];
+            // Just like in memory an item isn't deleted,
+            // but instead is just not available anymore
             getStackArray()[topIndexOfStack] = "[]";
             topIndexOfStack--;
             return popValue;
