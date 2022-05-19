@@ -10,29 +10,62 @@ public class TheQueue {
     private int rear;
     private int numberOfItems = 0;
 
+    /**
+     * Cosntructor
+     */
     TheQueue(int size) {
         queueSize = size;
         queueArray = new String[size];
-        Arrays.fill(queueArray, "()");
+        Arrays.fill(queueArray, "-1");
     }
 
-    public boolean insert(String input) {
+    /**
+     * Insert values in regular order as they appear to be added
+     */
+    public void insert(String input) {
 
-        if (numberOfItems + 1 <= queueSize) {
+        if ((numberOfItems + 1 <= queueSize - 1)) {
             queueArray[rear] = input;
             rear++;
             numberOfItems++;
-            return true;
+            System.out.println("INSERT succeded: '" + input + "' was added to the queue.");
+            // return true;
         } else {
-            return false;
+            System.out.println("INSERT failed: Queue is full.");
+            // return false;
         }
-
     }
 
+    /**
+     * Insert values in priority order (high to low)
+     */
+    public void insertPriority(String input) {
+
+        int i;
+        if (numberOfItems == 0) {
+            insert(input);
+        } else {
+            for (i = numberOfItems - 1; i >= 0; i--) {
+                if (Integer.parseInt(input) > Integer.parseInt(queueArray[i])) {
+                    queueArray[i + 1] = queueArray[i];
+                } else {
+                    break;
+                }
+            }
+            System.out.println("INSERT PRIORITY succeded: '" + input + "' was added to the queue.");
+            queueArray[i + 1] = input;
+            rear++;
+            numberOfItems++;
+        }
+    }
+
+    /**
+     * Remove a value from the front of the queue
+     */
     public String remove() {
         if (numberOfItems > 0) {
             String removedValue = queueArray[front];
-            queueArray[front] = "()";
+            queueArray[front] = "-1";
             front++;
             numberOfItems--;
             return removedValue;
@@ -41,93 +74,37 @@ public class TheQueue {
         }
     }
 
+    public void removeAll() {
+        if (numberOfItems > 0) {
+            for (int i = 0; i < queueSize; i++) {
+                queueArray[i] = "-1";
+            }
+            front = 0;
+            rear = 0;
+            numberOfItems = 0;
+        }
+    }
+
+    /**
+     * Peek the value that is in the front of the queue
+     */
     public String peek() {
-        return queueArray[front];
+        if (numberOfItems > 0) {
+            return queueArray[front];
+        } else {
+            return null;
+        }
     }
 
-    public static void main(String[] args) {
-
-        TheQueue theQueue = new TheQueue(15);
-
-        String strValue = "";
-        boolean succeded;
-
-        //////////////////////////////////////////////////////////////////
-        // Insert a value to the queue.
-        //
-        strValue = "First";
-        System.out.println(theQueue.insert(strValue) // returns a boolean
-                ? "INSERT succeded: '" + strValue + "' was added to the queue."
-                : "INSERT failed: Queue is full.");
-        print(theQueue);
-
-        strValue = "Second";
-        System.out.println(theQueue.insert(strValue) // returns a boolean
-                ? "INSERT succeded: '" + strValue + "' was added to the queue."
-                : "INSERTED failed: Queue is full.");
-        print(theQueue);
-
-        strValue = "Third";
-        System.out.println(theQueue.insert(strValue) // returns a boolean
-                ? "INSERT succeded: '" + strValue + "' was added to the queue."
-                : "INSERTED failed: Queue is full.");
-        print(theQueue);
-
-        //////////////////////////////////////////////////////////////////
-        // Remove the value that is at the top of the queue.
-        //
-        strValue = theQueue.remove();
-        System.out.println(strValue != null // returns removed string value
-                ? "REMOVE succeded: '" + strValue + "' was removed from the queue."
-                : "REMOVE failed: Sorry! Queue is empty, nothing to remove.");
-        print(theQueue);
-
-        strValue = theQueue.remove();
-        System.out.println(strValue != null // returns REMOVEped string value
-                ? "REMOVE succeded: '" + strValue + "' was removed from the queue."
-                : "REMOVE failed: Sorry! Queue is empty, nothing to remove.");
-        print(theQueue);
-
-        //////////////////////////////////////////////////////////////////
-        // INSERT - Insert a value to the top of the queue.
-        //
-        strValue = "Fourth";
-        System.out.println(theQueue.insert(strValue) // returns a boolean
-                ? "INSERT succeded: '" + strValue + "' was added to the queue."
-                : "INSERT failed: Queue is full.");
-        print(theQueue);
-
-        //////////////////////////////////////////////////////////////////
-        // PEEK - Just display the value that is at the top of the queue.
-        //
-        System.out.println(theQueue.peek() != null // returns peek string value
-                ? "PEEK succeded: '" + strValue + "' is at the top of the queue."
-                : "PEEK failed: Queue is empty.");
-        print(theQueue);
-
-        //////////////////////////////////////////////////////////////////
-        // INSERT MULTIPLE - Insert many values to the queue
-        //
-        // boolean succededINSERTingAll = theQueue
-        // .insertMany("good morning everybody I am here to tell you a little bit of
-        ////////////////////////////////////////////////////////////////// myself");
-        // System.out.println(succededINSERTingAll // returns a boolean
-        // ? "INSERT succeded with all multiples values."
-        // : "INSERT failed with some of the multiples values.");
-        // print(theQueue);
-
-        //////////////////////////////////////////////////////////////////
-        // REMOVE ALL - Remove all the values of the Queue
-        //
-        // System.out.println("REMOVE all values from Queue.");
-        // theQueue.removeAll();
-        // print(theQueue);
-
-    }
-
-    // Print the Queue and jump line
-    private static void print(TheQueue theQueue) {
-        System.out.println(Arrays.toString(theQueue.queueArray));
+    /**
+     * Print the queue and other attributes
+     */
+    public void print() {
+        System.out.println(Arrays.toString(queueArray));
+        System.out.println("queueSize = " + queueSize
+                + "\tfront = " + front
+                + "\trear = " + rear
+                + "\tnumberOfItems = " + numberOfItems);
         System.out.println();
     }
 
