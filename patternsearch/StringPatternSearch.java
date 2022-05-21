@@ -6,19 +6,23 @@ public class StringPatternSearch {
 
         int textSize = text.length();
         int patternSize = pattern.length();
-        String part = "";
+        String textPart = "";
 
         for (int i = 0; i < textSize - patternSize + 1; i++) {
-            part = text.substring(i, i + patternSize);
-            if (part.equals(pattern)) {
-                System.out.println("\nFound " + part + " starting at index" + i);
+            textPart = text.substring(i, (i + patternSize));
+            if (textPart.equals(pattern)) {
+                System.out.println("\nFound a match for "
+                        + textPart + " starting at index " + i);
             }
         }
+
     }
 
     public static void main(String[] args) {
-        String text = "AABABBAABABBAABA";
-        String pattern = "AABA";
+        // String text = "AABABBAABABBAABAAABAAABA";
+        String text = "AAAAAAAA";
+        // String pattern = "AABA";
+        String pattern = "A";
         searchForPattern(pattern, text);
     }
 
