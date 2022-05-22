@@ -1,4 +1,4 @@
-package patternsearch;
+package challenge.string;
 
 public class StringPatternSearch {
 
