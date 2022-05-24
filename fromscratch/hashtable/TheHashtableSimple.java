@@ -1,16 +1,16 @@
-package hashtable;
+package fromscratch.hashtable;
 
 import java.util.Arrays;
 /**
  * by siomara.com.br on May, 21 of 2022
  */
-public class HashtableFromScratch {
+public class TheHashtableSimple {
     
     String[] array;
     //int arraySize;
     
     public static void main(String[] args) {
-        HashtableFromScratch simpleHashtable = new HashtableFromScratch(20);
+        TheHashtableSimple simpleHashtable = new TheHashtableSimple(20);
         
         // Create and print empty array hash table before hashing
         System.out.println("\nEmpty array hash table:");
@@ -29,7 +29,7 @@ public class HashtableFromScratch {
 
     // Constructor
     // Simulate an empty array hash table with [] in all positions 
-    HashtableFromScratch(int arraySize) {
+    TheHashtableSimple(int arraySize) {
         this.array = new String[arraySize];
         Arrays.fill(this.array, "[]");
     }

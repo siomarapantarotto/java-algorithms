@@ -9,6 +9,7 @@ class HashtableAddElements {
 	public static void main(String args[]) {
 		// No need to mention the Generic type twice
 		Hashtable<Integer, String> ht1 = new Hashtable<>();
+		Hashtable<Integer, String> ht3 = new Hashtable<>();
 
 		// Initialization of a Hashtable using Generics
 		Hashtable<Integer, String> ht2 = new Hashtable<Integer, String>();
@@ -18,6 +19,11 @@ class HashtableAddElements {
 		ht1.put(2, "two");
 		ht1.put(3, "three");
 		ht1.put(4, "four");
+
+		ht3.put(1, "one");
+		ht3.put(2, "two");
+		ht3.put(3, "three");
+		ht3.put(4, "four");
 
 		ht2.put(4, "four");
 		ht2.put(5, "five");
@@ -54,7 +60,21 @@ class HashtableAddElements {
 
 		// Check hastables equality
 		boolean isequal = ht1.equals(ht2);
-		System.out.println("Are two hashtables equal : " + isequal);
+		System.out.println("Are hashtables HT1 and HT2 equal? : " + isequal);
+
+		System.out.println("Are hashtables HT1 and HT3 equal:  : " + ht1.equals(ht3));
+
+		// add 100 in each value using forEach()
+		ht3.forEach((k, v) -> {
+			v = v + 100;
+			ht3.replace(k, v);
+		});
+
+		System.out.println(ht3);
+		System.out.println("Are hashtables HT1 and HT3 equal:  : " + ht1.equals(ht3));
+
+		ht3.remove(2);
+		System.out.println(ht3);
 
 	}
 }
