@@ -4,11 +4,15 @@ import java.util.Arrays;
 
 public class MyMergeSortPractice {
 
+    // Overload - This method receives just the array to be
+    // sorted avoiding that wrong parameters are passed.
     public static void mergeSort(int[] data) {
-        
+        // Call method mergeSort passing 'array, start and end' that
+        // can be figured out instead of being passed as parameters.
         mergeSort(data, 0, data.length - 1);
     }
 
+    // The core merge sort starts here.
     private static void mergeSort(int[] data, int start, int end) {
         if (start < end) {
             int mid = (start + end) / 2; // find middle
@@ -20,7 +24,7 @@ public class MyMergeSortPractice {
 
     private static void merge(int[] data, int start, int mid, int end) {
 
-        int[] temp = new int[end - start + 1]; // set correct size
+        int[] temp = new int[end - start + 1]; // set correct size for temp array
         int i = start, j = mid + 1, k = 0; // set i and j to the subarrays starts
 
         while (i <= mid && j <= end) // double condition
