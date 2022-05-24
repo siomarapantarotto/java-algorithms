@@ -18,18 +18,19 @@ public class MyQuickSortPractice {
         }
     }
 
-    private static int partition(int data[], int start, int end) {
+    private static int partition(int[] data, int start, int end) {
+
         int pivot = data[end];
         int grtIndex = start - 1; // Set according to start, not just -1
 
-        for (int j = start; j < end; j++) {
-            if (data[j] <= pivot) {
-                grtIndex++;
-                swap(data, grtIndex, j);
+        for (int i = start; i < end; i++) {
+            if (data[i] <= pivot) { // check for <=
+                grtIndex++; // increment before swapp here but not bellow
+                swap(data, i, grtIndex); // order of indexes does not matter
             }
         }
-        swap(data, grtIndex + 1, end);
-        return (grtIndex + 1);
+        swap(data, end, grtIndex + 1); // remember to increment (grtIndex + 1)
+        return grtIndex + 1; // return grtIndex incremented
     }
 
     private static void swap(int[] data, int index1, int index2) {
@@ -39,7 +40,7 @@ public class MyQuickSortPractice {
     }
 
     public static void main(String[] args) {
-        int[] data = new int[] { 40, 30, 60, 455, 79, 32, 50, 100 };
+        int[] data = new int[] { 40, 30, 60, 455, 79, 32, 50, 200 };
 
         System.out.println("Before Quick Sort: " + Arrays.toString(data));
         quickSort(data);
