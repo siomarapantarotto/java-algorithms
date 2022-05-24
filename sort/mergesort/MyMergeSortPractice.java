@@ -5,9 +5,7 @@ import java.util.Arrays;
 public class MyMergeSortPractice {
 
     public static void mergeSort(int[] data) {
-        // int start = 0;
-        // int end = data.length - 1;
-        // mergeSort(data, start, end);
+        
         mergeSort(data, 0, data.length - 1);
     }
 
@@ -37,7 +35,7 @@ public class MyMergeSortPractice {
         while (j <= end)
             temp[k++] = data[j++];
 
-        for (i = start; i <= end; i++) // attention here, i = start not 0
+        for (i = start; i <= end; i++) // attention here, i = start
             data[i] = temp[i - start]; // attention to temp index
 
     }
