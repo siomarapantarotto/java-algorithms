@@ -28,12 +28,11 @@ public class BubbleSort {
         BubbleSort bubbleSorter = new BubbleSort();
 
         // create an array and generate random values
-        int[] data = new int[10];
+        int[] data = new int[100000000];
         Random random = new Random();
         for (int i = 0; i < data.length; i++) {
-            data[i] = random.nextInt(100);
+            data[i] = random.nextInt(1000000);
         }
-
         // print array before sort using Arrays.toString
         System.out.println("Before Bubble Sort:" + Arrays.toString(data));
 
