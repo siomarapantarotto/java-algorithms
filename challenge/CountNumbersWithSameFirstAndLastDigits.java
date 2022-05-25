@@ -6,7 +6,7 @@ public class CountNumbersWithSameFirstAndLastDigits {
 
     }
 }
-// TODO: Oh boy! How can I solve this?
+// Oh boy! How can I solve this?
 // Given a range of numbers count the numbers
 // which have same first and last digits.
 // Ex: between 7 and 20 such numbers are
