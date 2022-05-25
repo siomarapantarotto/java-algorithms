@@ -1,4 +1,4 @@
-package geeksforgeeks.linkedlist;
+package challenge.geeksforgeeks.linkedlist;
 
 public class CloneLinkedListWithRandomNode {
 
