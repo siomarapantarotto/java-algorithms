@@ -1,4 +1,4 @@
-package fromscratch.booklinkedlist;
+package fromscratch.linkedlist.booklinkedlist;
 
 public class BookLinkedList {
 
@@ -83,7 +83,6 @@ public class BookLinkedList {
             currBook.print();
             System.out.println("Next Book: " + currBook.next);
             currBook = currBook.next;
-            System.out.println();
         }
     }
 

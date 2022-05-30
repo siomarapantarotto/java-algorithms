@@ -1,4 +1,4 @@
-package fromscratch.booklinkedlist;
+package fromscratch.linkedlist.booklinkedlist;
 
 public class Book {
 
@@ -12,7 +12,7 @@ public class Book {
     }
 
     public void print() {
-        System.out.println("Book Name: " + name + ", Total Sold: " + totalSold);
+        System.out.println("\nBook Name: " + name + ", Total Sold: " + totalSold);
     }
 
     public String toString() {
