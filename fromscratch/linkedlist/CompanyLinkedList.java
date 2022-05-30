@@ -18,7 +18,7 @@ class Company {
         this.ownerName = companyOwnerName;
     }
 
-    // Method to create a random value for company ID.
+    // Method to generate a random value for company ID.
     static int generateRandomId() {
         Random random = new Random();
         return random.nextInt(1000000);
@@ -41,7 +41,8 @@ class Node {
     Node next;
 
     /**
-     * This constructor receives a key and an object as parameters.
+     * Node Constructor 1
+     * Receives two parameters: key and object.
      * 
      * @param keyParameter
      * @param objectParameter
@@ -52,11 +53,9 @@ class Node {
         next = null;
     }
 
-    Node() {
-    }
-
     /**
-     * This constructor receives just an object as parameter.
+     * Node constructor 2
+     * Receives only one parameter: object.
      * The node key will be randomly generated.
      * 
      * @param objectParameter
@@ -67,7 +66,14 @@ class Node {
         next = null;
     }
 
-    // Method to create random value for company ID.
+    /**
+     * Node constructor 3
+     * No argument constructor
+     */
+    Node() {
+    }
+
+    // Method to create a random value for the node key.
     static int generateRandomKey() {
         Random random = new Random();
         return random.nextInt(1000000);
@@ -79,9 +85,10 @@ class Node {
  * Class 3/3: TheLinkedList
  */
 class TheLinkedList {
-    // Creating a node
+    // Create the head node
     Node head;
 
+    // Constructor
     TheLinkedList() {
         head = null;
     }
@@ -123,17 +130,23 @@ class TheLinkedList {
         }
     }
 
+    /**
+     * Clone the linked List receiving a node head as parameter
+     * 
+     * @param head
+     * @return newHead node
+     */
     public Node cloneLinkedList(Node head) {
-        Node current = head; // used to iterate over the original list
+        Node current = head; // current iterates over the original list
         Node newHead = null; // head of the new clone list
         Node tail = null; // points to each last node added to the new clone list
 
         while (current != null) {
-            // special case for the first new node
+            // handles the first new added node (head is also tail)
             if (newHead == null) {
                 newHead = new Node(current.key, current.value);
-                tail = newHead;
-            } else {
+                tail = newHead; // for the first added node head is also tail
+            } else { // each new node added will be tail for a while
                 tail.next = new Node();
                 tail = tail.next;
                 tail.key = current.key;
@@ -142,13 +155,12 @@ class TheLinkedList {
             }
             current = current.next;
         }
-
         return newHead;
     }
 
-    public void printLinkedList(TheLinkedList theLinkedList) {
-        printFromHead(theLinkedList.head);
-    }
+    // public void printLinkedList(TheLinkedList theLinkedList) {
+    // printFromHead(theLinkedList.head);
+    // }
 
     public static void printFromHead(Node head) {
         while (head != null) {
@@ -167,27 +179,24 @@ class TheLinkedList {
 
         // Create companies
         Company c1 = new Company("Facebook", "Mark");
-        Company c2 = new Company("Apple", "Steve & Others");
-        Company c3 = new Company("Google", "Larry & Sergey");
-        Company c4 = new Company("Microsoft", "Bill");
-        Company c5 = new Company("Tesla", "Elon");
+        Company c2 = new Company("Apple", "Steve");
+        Company c3 = new Company("Google", "Larry");
+        Company c4 = new Company("Tesla", "Elon");
 
         // Create nodes passing sequential keys and
         // objects as parameters to constructor 1.
         // For study purpose only
-        // Node n1 = new Node(1, c1);
-        // Node n2 = new Node(2, c2);
-        // Node n3 = new Node(3, c3);
-        // Node n4 = new Node(4, c4);
-        // Node n5 = new Node(5, c5);
+        Node n1 = new Node(1, c1);
+        Node n2 = new Node(2, c2);
+        Node n3 = new Node(3, c3);
+        Node n4 = new Node(4, c4);
 
         // Create nodes passing just objects as parameters
         // Random keys will be generate by constructor 2.
-        Node n1 = new Node(c1);
-        Node n2 = new Node(c2);
-        Node n3 = new Node(c3);
-        Node n4 = new Node(c4);
-        Node n5 = new Node(c5);
+        // Node n1 = new Node(c1);
+        // Node n2 = new Node(c2);
+        // Node n3 = new Node(c3);
+        // Node n4 = new Node(c4);
 
         // Adding (and removing) to (or from) the front the
         // linked list will act as a stack that adds to and
@@ -200,13 +209,12 @@ class TheLinkedList {
         // Adding (and removing) to (or from) the tail the
         // linked list need to be traversed before addition.
         originalCompanyList.addToTail(n4);
-        originalCompanyList.addToTail(n5);
 
         // Print the linked list receving head as parameter.
-        System.out.print("\nPrint Linked List from head:");
+        System.out.print("\nPrint original Linked List from head:");
         printFromHead(originalCompanyList.head);
 
-        System.out.print("\nPrint Linked List Copy:");
+        System.out.print("\nPrint cloned Linked List from new head:");
         Node copyHead = originalCompanyList.cloneLinkedList(originalCompanyList.head);
         printFromHead(copyHead);
 
