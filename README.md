@@ -4,6 +4,34 @@
   <img src="https://user-images.githubusercontent.com/5893219/171964209-fef20d39-334c-4113-92f9-033ef284db91.png" />
 </p>
 
+# Welcome to my GIT reminders collection!
+
+## Table of contents
+  - [General info](#general-info)
+  - [Array](#array)
+  - [Hashtable](#hashtable)
+  - [Linkedlist](#linkedlist)
+  - [Thanks and how to contribute](#thanks-and-how-to-contribute)
+
+## General info
+
+This repo was created from scratch with GIT & GITBASH. Although its content may not make much sense
+to those who visit it, it is here that I have collected reminders for when I need to use GIT via command lines.
+
+## Array
+
+TODO
+
+## Hashtable
+
+TODO
+
+## Linkedlist
+
+TODO
+
+## Thanks and how to contribute
+
 Hello there!
 
 This repo will be always under construction!
@@ -19,8 +47,6 @@ You are welcome to collaborate if you wish.
 Feel free to grab some code that might interest you.
 
 Thanks for stopping by!
-
-siomara.com.br
 
 <p align='center'>
   <img src="https://img.shields.io/badge/Jakarta-Java-007396?style=for-the-badge&logo=java&logoColor=white" />&nbsp;&nbsp;
