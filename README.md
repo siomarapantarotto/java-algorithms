@@ -15,8 +15,7 @@
 
 ## General info
 
-This repo was created from scratch with GIT & GITBASH. Although its content may not make much sense
-to those who visit it, it is here that I have collected reminders for when I need to use GIT via command lines.
+TODO
 
 ## Array
 
