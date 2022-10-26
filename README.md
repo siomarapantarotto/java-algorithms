@@ -9,6 +9,7 @@
 ## Table of contents
   - [General info](#general-info)
   - [Big O Notation](#big-o-notation)
+  - [Data Structure](#data-structure)
   - [Array](#array)
   - [Hashtable](#hashtable)
   - [Linkedlist](#linkedlist)
@@ -49,6 +50,15 @@ The notations are:
 - Exponencial Time: O(b^n), b> 1
 - Factorial Time: O(n!)
 
+## Data Structure
+
+What is a data structure?
+
+A data structure (DS) is a way to store and organize data in a computer, so that it can be used efficiently.
+
+A data structure is a data organization, management, and storage format that enables efficient access and modification. More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data.
+
+Methods and techniques used to maintain (handle and storage) data in an organized fashion. Define data dependency and relationships.
 
 ## Array
 
