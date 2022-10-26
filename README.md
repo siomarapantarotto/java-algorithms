@@ -30,11 +30,10 @@ Big O notation is a way to measure how well a computer algorithm scales as the a
 
 It is not always a measure of speed but instead a measure of how well a computer algorithm scales.
 
-  45n^3 + 20n^2 + 19 = 84 (n = 1)
-    45n^3 + 20n^2 + 19 = 459 (n = 2)
-      45n^3 + 20n^2 + 19 = 47.019 (n = 10) n is still a small number
-        45n^3 = 45.000
-        O(n^3)
+    (n = 1)  45n^3 + 20n^2 + 19 = 84 
+    (n = 2)  45n^3 + 20n^2 + 19 = 459 
+    (n = 10) 45n^3 + 20n^2 + 19 = 47.019 (n is still a small number)
+    (n = 10) 45n^3 = 45.000 - O(n^3)
 
 Why is it important?
 
