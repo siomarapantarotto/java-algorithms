@@ -4,10 +4,7 @@
   <img src="https://user-images.githubusercontent.com/5893219/171964209-fef20d39-334c-4113-92f9-033ef284db91.png" />
 </p>
 
-# Welcome to my GIT reminders collection!
-
 ## Table of contents
-  - [General info](#general-info)
   - [Big O Notation](#big-o-notation)
   - [Data Structure](#data-structure)
   - [Array](#array)
@@ -15,32 +12,28 @@
   - [Linkedlist](#linkedlist)
   - [Thanks and how to contribute](#thanks-and-how-to-contribute)
 
-## General info
-
-TODO
-
 ## Big O Notation
 
-Big O notation is a mathematical notation that describes the limiting behavior of a function when the argument tends towards a particular value or infinity.
+Big O notation is a **mathematical notation** that describes the limiting behavior of a function when the argument tends towards a particular value or infinity.
 
-In computer science, big O notation is used to classify algorithms according to how their run time (performance – time complexity) or space requirements (memory – spacial complexity) grow as the input size grows.
+In computer science, big O notation is **used to classify algorithms according to how their run time (performance – time complexity) or space requirements (memory – spacial complexity) grow as the input size grows**.
 
-Big O notation is a way to measure how well a computer algorithm scales as the amount of data involved increases.
+Big O notation is **a way to measure how well a computer algorithm scales as the amount of data involved increases**.
 
 	Ex: Array[10 elements] vs Array[10 thousand elements]
 
-It is not always a measure of speed but instead a measure of how well a computer algorithm scales.
+**It is not always a measure of speed but instead a measure of how well a computer algorithm scales**.
 
-    (n = 1)  45n^3 + 20n^2 + 19 = 84 
-    (n = 2)  45n^3 + 20n^2 + 19 = 459 
-    (n = 10) 45n^3 + 20n^2 + 19 = 47.019 (n is still a small number)
-    (n = 10) 45n^3 = 45.000 - O(n^3)
+    **(n = 1)**  45n^3 + 20n^2 + 19 = **84**
+    **(n = 2)**  45n^3 + 20n^2 + 19 = **459** 
+    **(n = 10)** 45n^3 + 20n^2 + 19 = **47.019** (n is still a small number)
+    (n = 10) 45n^3 = 45.000 => O(n^3) here the impact on performance grows
 
-Why is it important?
+#### Why is Big O notation important?
 
-It is important to define with Big O notation the part of the algorithm that has the greatest affect ultimately on the final answer.
+It is important to define the part of the algorithm that has the greatest affect ultimately on the final answer.
 
-The notations are:
+#### The notations are:
 - Constant Time: O(1)
 - Logarithmic Time: O(log n)
 - Linear Time: O(n)
@@ -52,13 +45,13 @@ The notations are:
 
 ## Data Structure
 
-What is a data structure?
+#### What is a data structure?
 
-A data structure (DS) is a way to store and organize data in a computer, so that it can be used efficiently.
+- A data structure (DS) is a way to store and organize data in a computer, so that it can be used efficiently.
 
-A data structure is a data organization, management, and storage format that enables efficient access and modification. More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data.
+- A data structure is a data organization, management, and storage format that enables efficient access and modification. More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data.
 
-Methods and techniques used to maintain (handle and storage) data in an organized fashion. Define data dependency and relationships.
+- Methods and techniques used to maintain (handle and storage) data in an organized fashion. Define data dependency and relationships.
 
 ## Array
 
