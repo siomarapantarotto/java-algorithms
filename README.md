@@ -24,16 +24,16 @@ Big O notation is **a way to measure how well a computer algorithm scales as the
 
 **It is not always a measure of speed but instead a measure of how well a computer algorithm scales**.
 
-    **(n = 1)**  45n^3 + 20n^2 + 19 = **84**
-    **(n = 2)**  45n^3 + 20n^2 + 19 = **459** 
-    **(n = 10)** 45n^3 + 20n^2 + 19 = **47.019** (n is still a small number)
+    (n = 1)  45n^3 + 20n^2 + 19 = 84
+    (n = 2)  45n^3 + 20n^2 + 19 = 459 
+    (n = 10) 45n^3 + 20n^2 + 19 = 47.019 (n is still a small number)
     (n = 10) 45n^3 = 45.000 => O(n^3) here the impact on performance grows
 
-#### Why is Big O notation important?
+### *Why is Big O notation important?*
 
 It is important to define the part of the algorithm that has the greatest affect ultimately on the final answer.
 
-#### The notations are:
+### *The notations are:*
 - Constant Time: O(1)
 - Logarithmic Time: O(log n)
 - Linear Time: O(n)
@@ -45,7 +45,7 @@ It is important to define the part of the algorithm that has the greatest affect
 
 ## Data Structure
 
-#### What is a data structure?
+### *What is a data structure?*
 
 - A data structure (DS) is a way to store and organize data in a computer, so that it can be used efficiently.
 
