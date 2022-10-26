@@ -5,6 +5,7 @@
 </p>
 
 ## Table of contents
+
   - [Big O Notation](#big-o-notation)
   - [Data Structure](#data-structure)
   - [Array](#array)
@@ -20,14 +21,14 @@ In computer science, big O notation is **used to classify algorithms according t
 
 Big O notation is **a way to measure how well a computer algorithm scales as the amount of data involved increases**.
 
-	Ex: Array[10 elements] vs Array[10 thousand elements]
+> Ex: Array[10 elements] vs Array[10 thousand elements]
 
 **It is not always a measure of speed but instead a measure of how well a computer algorithm scales**.
 
-    (n = 1)  45n^3 + 20n^2 + 19 = 84
-    (n = 2)  45n^3 + 20n^2 + 19 = 459 
-    (n = 10) 45n^3 + 20n^2 + 19 = 47.019 (n is still a small number)
-    (n = 10) 45n^3 = 45.000 => O(n^3) here the impact on performance grows
+> (n = 1)  45n^3 + 20n^2 + 19 = 84
+> (n = 2)  45n^3 + 20n^2 + 19 = 459 
+> (n = 10) 45n^3 + 20n^2 + 19 = 47.019 (n is still a small number)
+  >> (n = 10) 45n^3 = 45.000 => O(n^3) here the impact on performance grows
 
 ### *Why is Big O notation important?*
 
@@ -45,6 +46,7 @@ It is important to define the part of the algorithm that has the greatest affect
 | - Cubic Time        | O(n³)       |
 | - Exponencial Time  | O(b^n), b> 1|
 | - Factorial Time    | O(n!)       |
+
 
 ## Data Structure
 
