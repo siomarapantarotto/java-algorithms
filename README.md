@@ -55,11 +55,11 @@ We always wanna shoot for EXCELLENT, if not possible shoot for GOOD, if not poss
 | O(log n)          |           |               | O(2^n)        |
 |                   |           |               | O(n!)         |
 
-## TIME COMPLEXITY
+## Time Complexity
 
 It is how long a program takes to process a given input. It is defined as the number of times a particular instruction set is executed rather than the total time is taken. It is because the total time took also depends on some external factors like the compiler used, processor’s speed, etc. 
 
-## SPACE COMPLEXITY
+## Space Complexity
 
 The space complexity of an algorithm or a computer program is the amount of memory space required to solve an instance of the computational problem as a function of characteristics of the input. It is the memory required by an algorithm until it executes completely. (Wikipedia)
 
