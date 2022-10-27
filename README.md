@@ -47,6 +47,15 @@ It is important to define the part of the algorithm that has the greatest affect
 | - Exponencial Time  | O(b^n), b> 1|
 | - Factorial Time    | O(n!)       |
 
+We always wanna shoot for EXCELLENT, if not possible shoot for GOOD, if not possible shoot for FAIR and so on…
+
+| Excellent/Good            | Fair      | Bad             | Horrible      |
+| ------------------------- | --------- | --------------- | ------------- |
+| O(1)                      | O(n)      | O(n log n)      | O(n^2)        |
+| O(log n) => applies for   |           | applies for     | O(2^n)        |
+| binary search,            |           | sorting arrays  | O(n!)         |
+| searching arrays          |           |                 |               | 
+
 # Data Structure
 
 ### *What is a data structure?*
@@ -67,7 +76,7 @@ TODO
 
 TODO
 
-# Linkedlist
+# LinkedList
 
 TODO
 
