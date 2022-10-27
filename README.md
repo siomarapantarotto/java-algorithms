@@ -4,7 +4,7 @@
   <img src="https://user-images.githubusercontent.com/5893219/171964209-fef20d39-334c-4113-92f9-033ef284db91.png" />
 </p>
 
-## Table of contents
+# Table of contents
 
   - [Big O Notation](#big-o-notation)
   - [Data Structure](#data-structure)
@@ -13,7 +13,7 @@
   - [Linkedlist](#linkedlist)
   - [Thanks and how to contribute](#thanks-and-how-to-contribute)
 
-## Big O Notation
+# Big O Notation
 
 Big O notation is a **mathematical notation** that describes the limiting behavior of a function when the argument tends towards a particular value or infinity.
 
@@ -47,7 +47,7 @@ It is important to define the part of the algorithm that has the greatest affect
 | - Exponencial Time  | O(b^n), b> 1|
 | - Factorial Time    | O(n!)       |
 
-## Data Structure
+# Data Structure
 
 ### *What is a data structure?*
 
@@ -59,19 +59,19 @@ It is important to define the part of the algorithm that has the greatest affect
 
 - **Methods and techniques used to maintain (handle and storage) data in an organized fashion**. Define data dependency and relationships.
 
-## Array
+# Array
 
 TODO
 
-## Hashtable
+# Hashtable
 
 TODO
 
-## Linkedlist
+# Linkedlist
 
 TODO
 
-## Thanks and how to contribute
+# Thanks and how to contribute
 
 Hello there!
 
