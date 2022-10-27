@@ -83,7 +83,14 @@ function calling and allocation (if we create things with the function being cal
 
 # Array
 
-TODO
+### *When and where is a static Array used?*
+
+- Storing and accessing sequential data
+- Temporarily storing objects
+- Used by IO routines as buffers
+- Lookup tables and inverse lookup tables
+- Can be used to return multiple values from a function
+- Used in dynamic programming to cache answres to subproblems
 
 # Hashtable
 
@@ -102,9 +109,9 @@ HashMap doesn’t provide any Enumeration, while Hashtable provides not fail-fas
 
 # LinkedList
 
-A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers. 
+A linked list is a **linear data structure**, in which the **elements are not stored at contiguous memory locations**. The elements in a linked list are linked using pointers. 
 
-It consists of individual enteties called nodes that have the acpability to connect other nodes and create a chain.
+It consists of individual enteties called **nodes that have the acpability to connect other nodes and create a chain**.
 
 Three types:
 
