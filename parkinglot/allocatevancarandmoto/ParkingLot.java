@@ -12,6 +12,7 @@ public class ParkingLot {
     }
 
     public boolean parkVehicle(String vehicleType) {
+
         switch (vehicleType) {
             case "van":
                 if (vanSpaces > 0) {
