@@ -16,7 +16,7 @@ public class ParkingLot {
         this.parkingSpaces = new HashMap<>();
     }
 
-    public boolean allocateParkingSpace(Vehicle vehicle) {
+    public synchronized boolean allocateParkingSpace(Vehicle vehicle) {
         if (this.availableCapacity > 0) {
             this.parkingSpaces.put(vehicle.getLicensePlate(), vehicle);
             this.availableCapacity--;
@@ -26,7 +26,7 @@ public class ParkingLot {
         }
     }
 
-    public boolean releaseParkingSpace(Vehicle vehicle) {
+    public synchronized boolean releaseParkingSpace(Vehicle vehicle) {
         if (this.parkingSpaces.containsKey(vehicle.getLicensePlate())) {
             this.parkingSpaces.remove(vehicle.getLicensePlate());
             this.availableCapacity++;
@@ -48,10 +48,10 @@ public class ParkingLot {
         return parkingSpaces;
     }
 
-    public void print() {
-        // print the contents of the HashMap
+    public void printParkedVehicles() {
+        System.out.println("Successfuly parked vehicles: ");
         for (String key : parkingSpaces.keySet()) {
-            System.out.println(key + ": " + Arrays.asList(parkingSpaces.get(key)));
+            System.out.println(key);
         }
     }
 
