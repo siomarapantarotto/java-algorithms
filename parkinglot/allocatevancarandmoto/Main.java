@@ -5,17 +5,12 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
+        // Create parking lot with capacity for each vehicle
         ParkingLot parkingLot = new ParkingLot(1, 2, 3);
 
         parkingLot.printAvailability();
 
-        /*
-         * System.out.println(parkingLot.parkVehicle("van"));
-         * System.out.println(parkingLot.parkVehicle("car"));
-         * System.out.println(parkingLot.parkVehicle("moto"));
-         * System.out.println(parkingLot.parkVehicle("bus"));
-         */
-
+        // Try also shuffling the order
         ArrayList<String> vehicleLine = new ArrayList<>();
         vehicleLine.add("van");
         vehicleLine.add("van");
@@ -30,6 +25,7 @@ public class Main {
         vehicleLine.add("moto");
         vehicleLine.add("trailler");
 
+        // Loop all the vehicles that intend to park
         Boolean success;
         for (String vehicle : vehicleLine) {
             success = parkingLot.parkVehicle(vehicle);
@@ -39,5 +35,14 @@ public class Main {
         }
 
         parkingLot.printAvailability();
+
+        // The code below shows that the ParkingLot class works,
+        // but without further details. Prefer the above one.
+        //
+        // system.out.println(parkinglot.parkvehicle("van"));
+        // system.out.println(parkinglot.parkvehicle("car"));
+        // system.out.println(parkinglot.parkvehicle("moto"));
+        // system.out.println(parkinglot.parkvehicle("bus"));
+
     }
 }
