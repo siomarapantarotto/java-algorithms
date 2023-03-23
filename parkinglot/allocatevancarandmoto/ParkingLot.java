@@ -25,21 +25,23 @@ public class ParkingLot {
                     return true;
                 }
                 break;
-            case "motorcycle":
+            case "moto":
                 if (motoSpaces > 0) {
                     motoSpaces--;
                     return true;
                 }
                 break;
             default:
-                System.out.println("Invalid vehicle type.");
+                System.out.println("ATTENTION!!! Invalid vehicle trying to park.");
         }
         return false;
     }
 
     public void printAvailability() {
-        System.out.println("Van spaces: " + vanSpaces);
-        System.out.println("Car spaces: " + carSpaces);
-        System.out.println("Motorcycle spaces: " + motoSpaces);
+        System.out.println("\nParking lot availability:");
+        System.out.println("Van spaces : " + vanSpaces);
+        System.out.println("Car spaces : " + carSpaces);
+        System.out.println("Moto spaces: " + motoSpaces);
+        System.out.println();
     }
 }
