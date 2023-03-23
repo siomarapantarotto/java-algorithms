@@ -1,4 +1,4 @@
-package parkinglot.justallocateandrelease;
+package parkinglot.allocateandrelease;
 
 public class Vehicle {
     private String licensePlate;

@@ -1,4 +1,4 @@
-package parkinglot.justallocateandrelease;
+package parkinglot.allocateandrelease;
 
 import java.util.ArrayList;
 
